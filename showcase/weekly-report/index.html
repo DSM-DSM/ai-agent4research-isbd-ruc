@@ -1485,7 +1485,8 @@ function renderTimeline() {
     if (currentIdx < 0) currentIdx = weeks.length - 1;
 
     let html = '';
-    weeks.slice().reverse().forEach((w, idx) => {
+    /* 演示版精简：时间线仅展示最近 4 周（倒序切片，origIdx 映射不受影响） */
+    weeks.slice().reverse().slice(0, 4).forEach((w, idx) => {
         const origIdx = weeks.length - 1 - idx;
         const sat = new Date(w.saturday + 'T00:00:00');
         const isFuture = sat > now;

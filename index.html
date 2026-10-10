@@ -229,9 +229,11 @@
             animation-delay: .34s;
         }
 
-        .tpl-head .repos {
-            margin-left: auto;
-            align-self: center;
+        .grid-repos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-top: 20px;
         }
 
         /* —— AI Agent 技能板块 —— */
@@ -632,8 +634,8 @@
                 padding-top: 42px;
             }
 
-            .tpl-head .repos {
-                margin-left: 0;
+            .grid-repos {
+                justify-content: flex-start;
             }
 
             .road-note {
@@ -724,20 +726,6 @@
         <span class="sec-kicker">Templates</span>
         <h2 class="sec-title">HTML 模板库</h2>
         <p class="sec-sub">五类科研汇报场景 · 主题一键切换 · 双击即用</p>
-        <div class="repos">
-            <a class="repo" href="https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc">
-                Gitee
-                <svg aria-hidden="true" viewBox="0 0 12 12">
-                    <path d="M3 9 9 3M4.5 3H9v4.5"/>
-                </svg>
-            </a>
-            <a class="repo" href="https://github.com/DSM-DSM/ai-agent4research-isbd-ruc">
-                GitHub
-                <svg aria-hidden="true" viewBox="0 0 12 12">
-                    <path d="M3 9 9 3M4.5 3H9v4.5"/>
-                </svg>
-            </a>
-        </div>
     </div>
 
     <main class="grid">
@@ -797,6 +785,21 @@
             </svg>
         </a>
     </main>
+
+    <div class="grid-repos">
+        <a class="repo" href="https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc">
+            Gitee
+            <svg aria-hidden="true" viewBox="0 0 12 12">
+                <path d="M3 9 9 3M4.5 3H9v4.5"/>
+            </svg>
+        </a>
+        <a class="repo" href="https://github.com/DSM-DSM/ai-agent4research-isbd-ruc">
+            GitHub
+            <svg aria-hidden="true" viewBox="0 0 12 12">
+                <path d="M3 9 9 3M4.5 3H9v4.5"/>
+            </svg>
+        </a>
+    </div>
 
     <section aria-label="规划中的模板" class="road">
         <span class="road-label">规划中</span>
