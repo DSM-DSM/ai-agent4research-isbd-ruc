@@ -304,20 +304,23 @@
         #header .ts-btn:hover{border-color:rgba(255,255,255,0.6);color:#ffffff}
         #header .ts-cur{color:#ffffff}
     </style>
+<script>window.A4R={mode:1,lang:1,themeKey:'labmeeting-theme',lightId:'11_ruc_beamer',darkId:'02_wwdc_dark'};</script>
+<script src="../../../a4r-bridge.js"></script>
+<style>html[data-lang="en"] [data-zh]{display:none!important}html[data-lang="zh"] [data-en]{display:none!important}</style>
 </head>
 <body data-default-theme="11_ruc_beamer" data-asset-prefix="../">
 
 <div id="app">
 
 <header id="header">
-    <h1>🧪 实验 Tricks 汇总 — 换头 / 换骨 / 模态融合 / 课程 / 分组专家（非 HBCE·HLUP 主线的结构创新）</h1>
+    <h1><span data-zh>🧪 实验 Tricks 汇总 — 换头 / 换骨 / 模态融合 / 课程 / 分组专家（非 HBCE·HLUP 主线的结构创新）</span><span data-en>🧪 Experiment Tricks Roundup — Head swaps / backbone swaps / modality fusion / curricula / grouped experts (structural innovations outside the HBCE·HLUP mainline)</span></h1>
     <div class="header-links">
-        <a href="../index.html">← 返回总览</a>
+        <a href="../index.html"><span data-zh>← 返回总览</span><span data-en>← Back to Overview</span></a>
     
-        <span style="background:#b45309;color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:3px 11px;border-radius:999px;white-space:nowrap;margin-right:10px;">演示数据</span>
+        <span style="background:#b45309;color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:3px 11px;border-radius:999px;white-space:nowrap;margin-right:10px;"><span data-zh>演示数据</span><span data-en>Demo data</span></span>
                 <div class="theme-switcher" id="theme-switcher">
                     <button class="ts-btn" type="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="ic ic-palette"></span><span class="ts-cur">主题</span>
+                        <span class="ic ic-palette"></span><span class="ts-cur"><span data-zh>主题</span><span data-en>Theme</span></span>
                     </button>
                     <div class="ts-panel" id="ts-panel" hidden></div>
                 </div>
@@ -326,20 +329,16 @@
 
 <nav id="sidebar">
     <div class="sidebar-section">
-        <div class="sidebar-parent expanded" onclick="this.classList.toggle('expanded');document.getElementById('children-nav').classList.toggle('open')">
-            📄 导航
-            <span class="arrow">▶</span>
+        <div class="sidebar-parent expanded" onclick="this.classList.toggle('expanded');document.getElementById('children-nav').classList.toggle('open')"><span data-zh>📄 导航</span><span data-en>📄 Navigation</span><span class="arrow">▶</span>
         </div>
         <div class="sidebar-children open" id="children-nav">
-            <a class="sidebar-child" href="../index.html">← 返回总览</a>
-            <a class="sidebar-child" href="../01_mdsed_paper/index.html">📋 MDS-ED 论文详解</a>
-            <a class="sidebar-child active" href="index.html">🧪 实验 Tricks 汇总</a>
+            <a class="sidebar-child" href="../index.html"><span data-zh>← 返回总览</span><span data-en>← Back to Overview</span></a>
+            <a class="sidebar-child" href="../01_mdsed_paper/index.html"><span data-zh>📋 MDS-ED 论文详解</span><span data-en>📋 MDS-ED Paper Deep Dive</span></a>
+            <a class="sidebar-child active" href="index.html"><span data-zh>🧪 实验 Tricks 汇总</span><span data-en>🧪 Experiment Tricks Roundup</span></a>
         </div>
     </div>
     <div class="sidebar-section" id="sidebar-inpage" style="display:none;">
-        <div class="sidebar-parent expanded" onclick="this.classList.toggle('expanded');document.getElementById('children-inpage').classList.toggle('open')">
-            📑 页内导航
-            <span class="arrow">▶</span>
+        <div class="sidebar-parent expanded" onclick="this.classList.toggle('expanded');document.getElementById('children-inpage').classList.toggle('open')"><span data-zh>📑 页内导航</span><span data-en>📑 On This Page</span><span class="arrow">▶</span>
         </div>
         <div class="sidebar-children open" id="children-inpage"></div>
     </div>

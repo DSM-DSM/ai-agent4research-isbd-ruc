@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>/paper-explainer 工作流详解 — 学术论文→中文HTML详解的自动化流水线</title>
   <link rel="icon" type="image/svg+xml" href="ruc-mark.svg">
-  <script src="../theme-pack.js"></script>
+  <script>window.A4R={mode:1,lang:1,themeKey:'paper-explainer-theme',lightId:'ruc',darkId:'ink-night'};</script>
+<script src="../../../a4r-bridge.js"></script>
+<style>html[data-lang="en"] [data-zh]{display:none!important}html[data-lang="zh"] [data-en]{display:none!important}</style>
+<script src="../theme-pack.js"></script>
   <style>
     /* ====================================================================
        设计令牌 (Design Tokens) —— 默认主题「纸墨」，与阅读路径页、知识图谱页同源；
@@ -209,11 +212,11 @@
 <body>
 <div class="progress" aria-hidden="true"></div>
 
-<div class="rb" style="justify-content:center;margin-bottom:20px;"><a href="mr_lecture.html">MR讲演</a> <a href="reading_path.html">阅读路径</a> <a href="knowledge_supplement.html">补充知识</a> <a href="basic_bio_knowledge.html">基础生物学</a> <a href="../knowledge_graph.html">知识图谱</a></div>
+<div class="rb" style="justify-content:center;margin-bottom:20px;"><a href="mr_lecture.html"><span data-zh>MR讲演</span><span data-en>MR Lecture</span></a> <a href="reading_path.html"><span data-zh>阅读路径</span><span data-en>Reading Path</span></a> <a href="knowledge_supplement.html"><span data-zh>补充知识</span><span data-en>Background</span></a> <a href="basic_bio_knowledge.html"><span data-zh>基础生物学</span><span data-en>Basic Biology</span></a> <a href="../knowledge_graph.html"><span data-zh>知识图谱</span><span data-en>Knowledge Graph</span></a></div>
 
 <!-- ====== COVER ====== -->
 <div class="cover">
-  <h1>/paper-explainer 工作流详解</h1>
+  <h1><span data-zh>/paper-explainer 工作流详解</span><span data-en>/paper-explainer Workflow Deep Dive</span></h1>
   <div class="subtitle">学术论文 PDF → 自包含中文 HTML 详解 + 知识图谱的自动化流水线</div>
   <div class="badge-row">
     <span class="badge">10 步自动化流程</span>
@@ -267,7 +270,7 @@
 <div class="step-card">
   <span class="step-icon">📂</span>
   <h4>Step 1 · 整理 PDF</h4>
-  <p><strong>做什么：</strong>将论文 PDF 复制到项目的 <code>literature/</code> 目录。</p>
+  <p><strong>做什么：</strong>将论文 PDF 复制到项目的 <code>literature/</code> <span data-zh>目录</span><span data-en>Contents</span>。</p>
   <p><strong>为什么：</strong>确保所有原始 PDF 集中存放，便于后续查找和维护。</p>
   <p><strong>命令：</strong><code>mkdir -p literature/ && cp paper.pdf literature/</code></p>
 </div>
@@ -542,12 +545,12 @@
 &lt;/head&gt;
 &lt;body&gt;
   <span class="comment">&lt;!-- 1. 顶部导航栏 --&gt;</span>
-  <span class="file">&lt;div class="top-nav-bar"&gt;</span>链接知识图谱、其他论文、原始PDF<span class="file">&lt;/div&gt;</span>
+  <span class="file">&lt;div class="top-nav-bar"&gt;</span>链接知识图谱、其他论文、<span data-zh>原始PDF</span><span data-en>Original PDF</span><span class="file">&lt;/div&gt;</span>
 
   <span class="comment">&lt;!-- 2. 头部 --&gt;</span>
   <span class="file">&lt;header&gt;</span>标题、作者、期刊、DOI、<span class="file">&lt;div class="abstract-box"&gt;</span>核心要义<span class="file">&lt;/div&gt;&lt;/header&gt;</span>
 
-  <span class="comment">&lt;!-- 3. 目录 --&gt;</span>
+  <span class="comment">&lt;!-- 3. <span data-zh>目录</span><span data-en>Contents</span> --&gt;</span>
   <span class="file">&lt;nav class="toc"&gt;</span>可折叠的锚点链接目录<span class="file">&lt;/nav&gt;</span>
 
   <span class="comment">&lt;!-- 4. 正文 — 逐节展开 --&gt;</span>
@@ -557,7 +560,7 @@
 
   <span class="comment">&lt;!-- 5. 页脚 --&gt;</span>
   <span class="file">&lt;footer&gt;</span>
-    <span class="file">&lt;div class="related-bar"&gt;</span>所有论文链接 + 知识图谱 + 原始PDF<span class="file">&lt;/div&gt;</span>
+    <span class="file">&lt;div class="related-bar"&gt;</span>所有论文链接 + 知识图谱 + <span data-zh>原始PDF</span><span data-en>Original PDF</span><span class="file">&lt;/div&gt;</span>
   <span class="file">&lt;/footer&gt;</span>
 &lt;/body&gt;
 &lt;/html&gt;
@@ -643,8 +646,8 @@
 </table>
 
 <footer>
-  <p><strong>AI4Research 文献精读项目</strong> · /paper-explainer 工作流详解 · 2026-08-14</p>
-  <p style="font-size:0.85em;">本文档同样遵循 paper-explainer 的输出质量标准——自包含、结构化、中英术语统一。</p>
+  <p><strong><span data-zh>AI4Research 文献精读项目</span><span data-en>AI4Research Literature Project</span></strong><span data-zh> · /paper-explainer 工作流详解 · 2026-08-14</span><span data-en> · /paper-explainer workflow deep dive · 2026-08-14</span></p>
+  <p style="font-size:0.85em;"><span data-zh>本文档同样遵循 paper-explainer 的输出质量标准——自包含、结构化、中英术语统一。</span><span data-en>This document follows the same paper-explainer output quality bar — self-contained, structured, with unified Chinese–English terminology.</span></p>
 </footer>
 
 <!-- 主题切换 + 入场渐显 + 阅读进度（与其余三个模板逐字相同） -->

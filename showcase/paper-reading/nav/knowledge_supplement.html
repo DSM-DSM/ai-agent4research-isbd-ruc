@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>需要补充的知识点 - AI4Research</title>
   <link rel="icon" type="image/svg+xml" href="ruc-mark.svg">
-  <script src="../theme-pack.js"></script>
+  <script>window.A4R={mode:1,lang:1,themeKey:'paper-explainer-theme',lightId:'ruc',darkId:'ink-night'};</script>
+<script src="../../../a4r-bridge.js"></script>
+<style>html[data-lang="en"] [data-zh]{display:none!important}html[data-lang="zh"] [data-en]{display:none!important}</style>
+<script src="../theme-pack.js"></script>
   <style>
     /* ====================================================================
        设计令牌 (Design Tokens) —— 默认主题「纸墨」，与阅读路径页、知识图谱页同源；
@@ -201,7 +204,7 @@
 <body>
 <div class="progress" aria-hidden="true"></div>
 
-<header><h1>需要补充的知识点</h1><div class="sub">MR与AI科学发现的背景概念速查——每个知识点配有简明解释和相关论文链接</div></header><div class="concept"><h3>孟德尔随机化（MR）原理与IV三大假设</h3><div class="def-box"><p>利用遗传变异作为工具变量(IV)来推断暴露对结局的因果效应。三大假设：(1)关联性——IV与暴露显著相关；(2)独立性——IV不与混杂因素相关；(3)排他性——IV仅通过暴露影响结局。</p></div><div class="papers">相关论文：<a href="../papers/Skrivankova_2021_Strengthening_Reporting_Observational_zh.html">Skrivankova</a>, <a href="../papers/Sanderson_2022_Mendelian_randomization_zh.html">Sanderson</a></div><div class="links"><a href="../papers/Skrivankova_2021_Strengthening_Reporting_Observational_zh.html">跳转到Skrivankova论文</a> <a href="../papers/Sanderson_2022_Mendelian_randomization_zh.html">跳转到Sanderson论文</a> <a href="reading_path.html">返回路径主页</a></div></div>
+<header><h1><span data-zh>需要补充的知识点</span><span data-en>Background Knowledge to Fill In</span></h1><div class="sub"><span data-zh>MR与AI科学发现的背景概念速查——每个知识点配有简明解释和相关论文链接</span><span data-en>Quick reference of background concepts behind MR and AI-driven scientific discovery — each with a brief explanation and links to related papers</span></div></header><div class="concept"><h3>孟德尔随机化（MR）原理与IV三大假设</h3><div class="def-box"><p>利用遗传变异作为工具变量(IV)来推断暴露对结局的因果效应。三大假设：(1)关联性——IV与暴露显著相关；(2)独立性——IV不与混杂因素相关；(3)排他性——IV仅通过暴露影响结局。</p></div><div class="papers">相关论文：<a href="../papers/Skrivankova_2021_Strengthening_Reporting_Observational_zh.html">Skrivankova</a>, <a href="../papers/Sanderson_2022_Mendelian_randomization_zh.html">Sanderson</a></div><div class="links"><a href="../papers/Skrivankova_2021_Strengthening_Reporting_Observational_zh.html">跳转到Skrivankova论文</a> <a href="../papers/Sanderson_2022_Mendelian_randomization_zh.html">跳转到Sanderson论文</a> <a href="reading_path.html">返回路径主页</a></div></div>
 <div class="concept"><h3>顺式pQTL与共定位分析(coloc+SuSiE)</h3><div class="def-box"><p>pQTL是影响蛋白表达水平的基因位点。cis-pQTL位于编码基因附近(±500kb-1Mb)，水平多效性风险较小。共定位分析验证蛋白和疾病在同一基因位点是否共享同一因果变异——PP4>0.7为强证据。SuSiE用于精细定位，识别95%可信集。</p></div><div class="papers">相关论文：<a href="../papers/Yao_2025_Proteome_Wide_Genetic_zh.html">Yao</a></div><div class="links"><a href="../papers/Yao_2025_Proteome_Wide_Genetic_zh.html">跳转到Yao论文</a> <a href="reading_path.html">返回路径主页</a></div></div>
 <div class="concept"><h3>Wald ratio / IVW / MR-Egger / 多效性</h3><div class="def-box"><p>Wald ratio是最简单的MR估计器：因果效应估计=变异-结局效应/变异-暴露效应。IVW(逆方差加权)是多工具变量场景下的元分析方法。MR-Egger允许工具变量有定向多效性。多效性(pleiotropy)是指一个遗传变异通过多个通路影响多种性状。</p></div><div class="papers">相关论文：<a href="../papers/Sanderson_2022_Mendelian_randomization_zh.html">Sanderson</a>, <a href="../papers/Larsson_2023_Mendelian_randomization_cardiovascular_zh.html">Larsson</a></div><div class="links"><a href="../papers/Sanderson_2022_Mendelian_randomization_zh.html">跳转到Sanderson论文</a> <a href="../papers/Larsson_2023_Mendelian_randomization_cardiovascular_zh.html">跳转到Larsson论文</a> <a href="reading_path.html">返回路径主页</a></div></div>
 <div class="concept"><h3>两步MR与中介分析</h3><div class="def-box"><p>两步MR(Mediation MR)用于量化"暴露-中介-结局"因果链的中介效应占比。Step1:暴露对中介的因果效应。Step2:中介对结局的因果效应。Product方法估计间接效应，Delta方法估计标准误。</p></div><div class="papers">相关论文：<a href="../papers/Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html">Yoshiji</a>, <a href="../papers/Larsson_2023_Mendelian_randomization_cardiovascular_zh.html">Larsson</a></div><div class="links"><a href="../papers/Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html">跳转到Yoshiji论文</a> <a href="../papers/Larsson_2023_Mendelian_randomization_cardiovascular_zh.html">跳转到Larsson论文</a> <a href="reading_path.html">返回路径主页</a></div></div>
@@ -213,8 +216,8 @@
 
 
 <footer>
-<div class="rb"><strong>导航：</strong> <a href="../knowledge_graph.html">知识图谱</a> <a href="mr_lecture.html">MR讲演</a> <a href="reading_path.html">阅读路径主页</a> <a href="basic_bio_knowledge.html">基础生物学</a> <a href="knowledge_supplement.html">返回顶部</a></div>
-<p style="margin-top:12px;">AI4Research 文献精读项目 · 补充知识点 · 2026-08-14</p>
+<div class="rb"><strong><span data-zh>导航：</span><span data-en>Navigate:</span></strong> <a href="../knowledge_graph.html"><span data-zh>知识图谱</span><span data-en>Knowledge Graph</span></a> <a href="mr_lecture.html"><span data-zh>MR讲演</span><span data-en>MR Lecture</span></a> <a href="reading_path.html"><span data-zh>阅读路径主页</span><span data-en>Reading Path Home</span></a> <a href="basic_bio_knowledge.html"><span data-zh>基础生物学</span><span data-en>Basic Biology</span></a> <a href="knowledge_supplement.html"><span data-zh>返回顶部</span><span data-en>Back to top</span></a></div>
+<p style="margin-top:12px;">AI4Research 文献精读项目 · <span data-zh>补充知识点</span><span data-en>Background Notes</span> · 2026-08-14</p>
 </footer>
 
 <!-- 主题切换 + 入场渐显 + 阅读进度（与其余三个模板逐字相同） -->

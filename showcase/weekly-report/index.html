@@ -432,6 +432,9 @@
         #header .ts-btn:hover{border-color:rgba(255,255,255,0.6);color:#ffffff}
         #header .ts-cur{color:#ffffff}
     </style>
+<script>window.A4R={mode:1,lang:1,themeKey:'labmeeting-theme',lightId:'11_ruc_beamer',darkId:'02_wwdc_dark'};</script>
+<script src="../../a4r-bridge.js"></script>
+<style>html[data-lang="en"] [data-zh]{display:none!important}html[data-lang="zh"] [data-en]{display:none!important}</style>
 </head>
 <body data-default-theme="11_ruc_beamer" data-asset-prefix="">
 
@@ -439,14 +442,14 @@
 
 <!-- ═══════ HEADER ═══════ -->
 <header id="header">
-    <h1>📊 MDS-ED 实验进度报告</h1>
+    <h1><span data-zh>📊 MDS-ED 实验进度报告</span><span data-en>📊 MDS-ED Experiment Progress Report</span></h1>
     <div class="header-right">
-        <span class="countdown" id="countdown">下次组会: —</span>
+        <span class="countdown" id="countdown"><span data-zh>下次组会: —</span><span data-en>Next meeting: —</span></span>
         <span id="current-date" style="font-size:0.8125rem;"></span>
-        <span style="background:#b45309;color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:3px 11px;border-radius:999px;white-space:nowrap;margin-right:10px;">演示数据</span>
+        <span style="background:#b45309;color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:3px 11px;border-radius:999px;white-space:nowrap;margin-right:10px;"><span data-zh>演示数据</span><span data-en>Demo data</span></span>
                 <div class="theme-switcher" id="theme-switcher">
                     <button class="ts-btn" type="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="ic ic-palette"></span><span class="ts-cur">主题</span>
+                        <span class="ic ic-palette"></span><span class="ts-cur"><span data-zh>主题</span><span data-en>Theme</span></span>
                     </button>
                     <div class="ts-panel" id="ts-panel" hidden></div>
                 </div>
@@ -457,38 +460,24 @@
 <nav id="sidebar">
     <!-- 论文与方法页面 -->
     <div class="sidebar-section">
-        <div class="sidebar-parent expanded" onclick="toggleSidebar(this,'children-pages')">
-            📄 论文与方法页面
-            <span class="arrow">▶</span>
+        <div class="sidebar-parent expanded" onclick="toggleSidebar(this,'children-pages')"><span data-zh>📄 论文与方法页面</span><span data-en>📄 Papers & Methods Pages</span><span class="arrow">▶</span>
         </div>
         <div class="sidebar-children open" id="children-pages">
-            <a class="sidebar-child ext-link" href="01_mdsed_paper/index.html">
-                📋 MDS-ED 论文详解
-                <span class="badge badge-ext">→</span>
+            <a class="sidebar-child ext-link" href="01_mdsed_paper/index.html"><span data-zh>📋 MDS-ED 论文详解</span><span data-en>📋 MDS-ED Paper Deep Dive</span><span class="badge badge-ext">→</span>
             </a>
-            <a class="sidebar-child ext-link" href="06_tricks_experiments/index.html">
-                🧪 实验 Tricks 汇总
-                <span class="badge badge-ok">已收口</span>
+            <a class="sidebar-child ext-link" href="06_tricks_experiments/index.html"><span data-zh>🧪 实验 Tricks 汇总</span><span data-en>🧪 Experiment Tricks Roundup</span><span class="badge badge-ok"><span data-zh>已收口</span><span data-en>Concluded</span></span>
             </a>
             </div>
     </div>
 
     <!-- 页面内导航 -->
     <div class="sidebar-section">
-        <div class="sidebar-parent expanded" onclick="toggleSidebar(this,'children-nav')">
-            📊 页面内导航
-            <span class="arrow">▶</span>
+        <div class="sidebar-parent expanded" onclick="toggleSidebar(this,'children-nav')"><span data-zh>📊 页面内导航</span><span data-en>📊 On This Page</span><span class="arrow">▶</span>
         </div>
         <div class="sidebar-children open" id="children-nav">
-            <div class="sidebar-child active" data-target="sec-dashboard" onclick="scrollToSection('sec-dashboard',this)">
-                📊 整体指标仪表盘
-            </div>
-            <div class="sidebar-child" data-target="sec-timeline" onclick="scrollToSection('sec-timeline',this)">
-                📅 每周进度时间线
-            </div>
-            <div class="sidebar-child" data-target="sec-thisweek" onclick="scrollToSection('sec-thisweek',this)">
-                📝 本周任务清单
-            </div>
+            <div class="sidebar-child active" data-target="sec-dashboard" onclick="scrollToSection('sec-dashboard',this)"><span data-zh>📊 整体指标仪表盘</span><span data-en>📊 Overall Metrics Dashboard</span></div>
+            <div class="sidebar-child" data-target="sec-timeline" onclick="scrollToSection('sec-timeline',this)"><span data-zh>📅 每周进度时间线</span><span data-en>📅 Weekly Progress Timeline</span></div>
+            <div class="sidebar-child" data-target="sec-thisweek" onclick="scrollToSection('sec-thisweek',this)"><span data-zh>📝 本周任务清单</span><span data-en>📝 This Week's Task List</span></div>
             </div>
     </div>
 </nav>
@@ -513,20 +502,20 @@
 <div class="quick-links">
     <a class="quick-link-card ql-mdsed" href="01_mdsed_paper/index.html">
         <div class="ql-icon">📄</div>
-        <div class="ql-title">MDS-ED 原始论文</div>
-        <div class="ql-desc">框架基线、关键公式、架构详解</div>
+        <div class="ql-title"><span data-zh>MDS-ED 原始论文</span><span data-en>MDS-ED Original Paper</span></div>
+        <div class="ql-desc"><span data-zh>框架基线、关键公式、架构详解</span><span data-en>Framework baseline, key formulas, architecture walkthrough</span></div>
     </a>
     <a class="quick-link-card ql-m2" href="06_tricks_experiments/index.html">
         <div class="ql-icon">🧪</div>
-        <div class="ql-title">实验 Tricks 汇总</div>
-        <div class="ql-desc">增量技巧、消融与裁决实验</div>
+        <div class="ql-title"><span data-zh>实验 Tricks 汇总</span><span data-en>Experiment Tricks Roundup</span></div>
+        <div class="ql-desc"><span data-zh>增量技巧、消融与裁决实验</span><span data-en>Incremental tricks, ablations & adjudication experiments</span></div>
     </a>
     </div>
 
 <!-- ═══ Dashboard ═══ -->
 <div class="card" id="sec-dashboard">
     <div class="card-header">
-        <div class="card-title">📊 整体指标仪表盘</div>
+        <div class="card-title"><span data-zh>📊 整体指标仪表盘</span><span data-en>📊 Overall Metrics Dashboard</span></div>
         <span class="status-tag status-ok" id="dashboard-status">加载中...</span>
     </div>
     <div class="compare-grid" id="dashboard-cards"></div>
@@ -965,9 +954,10 @@ document.getElementById('content').addEventListener('scroll', () => {
 }, {passive: true});
 
 function updateHeader() {
+    const EN = document.documentElement.getAttribute('data-lang') === 'en';
     const now = new Date();
     document.getElementById('current-date').textContent =
-        now.toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric'});
+        now.toLocaleDateString(EN?'en-US':'zh-CN',{year:'numeric',month:'long',day:'numeric'});
     let nextMeetingStr = null;
     if (D && D.weekly_progress) {
         const weeks = D.weekly_progress;
@@ -980,16 +970,19 @@ function updateHeader() {
         if (daysToMeeting < 0) daysToMeeting = null;
     }
     if (daysToMeeting != null) {
-        document.getElementById('countdown').textContent =
-            `下次组会: ${nextMeeting.toLocaleDateString('zh-CN',{month:'numeric',day:'numeric'})} (${daysToMeeting}天后)`;
+        document.getElementById('countdown').textContent = EN
+            ? `Next meeting: ${nextMeeting.toLocaleDateString('en-US',{month:'numeric',day:'numeric'})} (in ${daysToMeeting} days)`
+            : `下次组会: ${nextMeeting.toLocaleDateString('zh-CN',{month:'numeric',day:'numeric'})} (${daysToMeeting}天后)`;
         const wc = document.getElementById('week-countdown');
-        if (wc) wc.textContent = `📅 距下次组会还有 ${daysToMeeting} 天`;
+        if (wc) wc.textContent = EN ? `📅 ${daysToMeeting} days until next meeting` : `📅 距下次组会还有 ${daysToMeeting} 天`;
     } else {
-        document.getElementById('countdown').textContent = '下次组会: 待定';
+        document.getElementById('countdown').textContent = EN ? 'Next meeting: TBD' : '下次组会: 待定';
         const wc = document.getElementById('week-countdown');
-        if (wc) wc.textContent = '📅 下次组会日期待定';
+        if (wc) wc.textContent = EN ? '📅 Next meeting date TBD' : '📅 下次组会日期待定';
     }
 }
+// 语言偏好切换（a4r-bridge 经 storage 事件广播）时同步刷新日期/倒计时文案
+window.addEventListener('storage', (ev) => { if (ev.key === 'a4r-lang') updateHeader(); });
 
 function renderDashboard() {
     if (!D) return;

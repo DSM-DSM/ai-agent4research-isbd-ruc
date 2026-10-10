@@ -329,19 +329,22 @@
         #header .ts-btn:hover{border-color:rgba(255,255,255,0.6);color:#ffffff}
         #header .ts-cur{color:#ffffff}
     </style>
+<script>window.A4R={mode:1,lang:1,themeKey:'labmeeting-theme',lightId:'11_ruc_beamer',darkId:'02_wwdc_dark'};</script>
+<script src="../../../a4r-bridge.js"></script>
+<style>html[data-lang="en"] [data-zh]{display:none!important}html[data-lang="zh"] [data-en]{display:none!important}</style>
 </head>
 <body data-default-theme="11_ruc_beamer" data-asset-prefix="../">
 
 <div id="app">
 
 <header id="header">
-    <h1>📄 MDS-ED 原始论文详解</h1>
+    <h1><span data-zh>📄 MDS-ED 原始论文详解</span><span data-en>📄 MDS-ED Original Paper Deep Dive</span></h1>
     <div class="header-links">
         <a class="pdf-na" title="原论文 PDF 未随展示库分发，可按论文名检索"><span class="icon-pdf">📕</span> PDF</a>
-        <span style="background:#b45309;color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:3px 11px;border-radius:999px;white-space:nowrap;margin-right:10px;">演示数据</span>
+        <span style="background:#b45309;color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:3px 11px;border-radius:999px;white-space:nowrap;margin-right:10px;"><span data-zh>演示数据</span><span data-en>Demo data</span></span>
                 <div class="theme-switcher" id="theme-switcher">
                     <button class="ts-btn" type="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="ic ic-palette"></span><span class="ts-cur">主题</span>
+                        <span class="ic ic-palette"></span><span class="ts-cur"><span data-zh>主题</span><span data-en>Theme</span></span>
                     </button>
                     <div class="ts-panel" id="ts-panel" hidden></div>
                 </div>
@@ -350,14 +353,12 @@
 
 <nav id="sidebar">
     <div class="sidebar-section">
-        <div class="sidebar-parent expanded" onclick="this.classList.toggle('expanded');document.getElementById('children-nav').classList.toggle('open')">
-            📄 导航
-            <span class="arrow">▶</span>
+        <div class="sidebar-parent expanded" onclick="this.classList.toggle('expanded');document.getElementById('children-nav').classList.toggle('open')"><span data-zh>📄 导航</span><span data-en>📄 Navigation</span><span class="arrow">▶</span>
         </div>
         <div class="sidebar-children open" id="children-nav">
-            <a class="sidebar-child" href="../index.html">← 返回总览</a>
-            <a class="sidebar-child active" href="index.html">📋 MDS-ED 论文详解</a>
-            <a class="sidebar-child" href="../06_tricks_experiments/index.html">🧪 实验 Tricks 汇总</a>
+            <a class="sidebar-child" href="../index.html"><span data-zh>← 返回总览</span><span data-en>← Back to Overview</span></a>
+            <a class="sidebar-child active" href="index.html"><span data-zh>📋 MDS-ED 论文详解</span><span data-en>📋 MDS-ED Paper Deep Dive</span></a>
+            <a class="sidebar-child" href="../06_tricks_experiments/index.html"><span data-zh>🧪 实验 Tricks 汇总</span><span data-en>🧪 Experiment Tricks Roundup</span></a>
         </div>
     </div>
 </nav>

@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROBIN: 多智能体系统自动化科学发现 —— 详细中文解读</title>
   <link rel="icon" type="image/svg+xml" href="ruc-mark.svg">
-  <script src="../theme-pack.js"></script>
+  <script>window.A4R={mode:1,lang:1,themeKey:'paper-explainer-theme',lightId:'ruc',darkId:'ink-night'};</script>
+<script src="../../../a4r-bridge.js"></script>
+<style>html[data-lang="en"] [data-zh]{display:none!important}html[data-lang="zh"] [data-en]{display:none!important}</style>
+<script src="../theme-pack.js"></script>
   <style>
     /* ====================================================================
        1. 设计令牌 (Design Tokens) —— 默认主题「纸墨」，其余 7 套由
@@ -344,20 +347,20 @@
 <div class="progress" aria-hidden="true"></div>
 
 <div class="top-nav-bar">
-<span class="current">← 当前论文</span>
+<span class="current"><span data-zh>← 当前论文</span><span data-en>← Current paper</span></span>
 <a href="Skrivankova_2021_Strengthening_Reporting_Observational_zh.html">STROBE-MR</a>
 <a href="Sanderson_2022_Mendelian_randomization_zh.html">MR Primer</a>
 <a href="Larsson_2023_Mendelian_randomization_cardiovascular_zh.html">MR-CVD</a>
-<a href="Yao_2025_Proteome_Wide_Genetic_zh.html">卒中蛋白组MR</a>
-<a href="Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html">两步MR</a>
+<a href="Yao_2025_Proteome_Wide_Genetic_zh.html"><span data-zh>卒中蛋白组MR</span><span data-en>Proteome MR for Stroke</span></a>
+<a href="Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html"><span data-zh>两步MR</span><span data-en>Two-step MR</span></a>
 <a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">🔍 PISA</a>
 <a href="Salamone_2026_Trans-Regulatory_gene_mapping_zh.html">🔍 DANDELION</a>
-<a href="../nav/reading_path.html">阅读路径</a>
-<a href="../nav/knowledge_supplement.html">补充知识</a>
-<a href="../nav/mr_lecture.html">MR讲演</a>
+<a href="../nav/reading_path.html"><span data-zh>阅读路径</span><span data-en>Reading Path</span></a>
+<a href="../nav/knowledge_supplement.html"><span data-zh>补充知识</span><span data-en>Background</span></a>
+<a href="../nav/mr_lecture.html"><span data-zh>MR讲演</span><span data-en>MR Lecture</span></a>
 <a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">PISA (Nat Commun 2026)</a>
-<a href="../knowledge_graph.html">知识图谱</a>
-<a class="pdf-na" title="原论文 PDF 未随展示库分发，可按论文名检索">原始PDF</a>
+<a href="../knowledge_graph.html"><span data-zh>知识图谱</span><span data-en>Knowledge Graph</span></a>
+<a class="pdf-na" title="原论文 PDF 未随展示库分发，可按论文名检索"><span data-zh>原始PDF</span><span data-en>Original PDF</span></a>
 </div>
 
 <header>
@@ -369,7 +372,7 @@
 </header>
 
 <nav class="toc">
-<h3>📑 目录</h3>
+<h3>📑 <span data-zh>目录</span><span data-en>Contents</span></h3>
 <ol>
 <li><a href="#sec-0">阅读导引：AI驱动科学发现的背景</a></li>
 <li><a href="#sec-1">研究背景与动机</a></li>
@@ -459,7 +462,7 @@
 <span class="tag">要点总结</span>
 <p>ROBIN 的创新在于：首次将<strong>文献检索假设生成 + 实验数据分析 + 结果驱动的假设迭代</strong>整合为一个连续的自动化工作流，并通过真实实验室实验验证了其发现。</p>
 </div>
-<a href="#" class="back-top">↑ 返回目录</a>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a>
 </section>
 
 <section id="sec-2">
@@ -523,7 +526,7 @@
 <p>给定压缩的 .fcs 文件和元数据表，Finch 自主：(1) 使用 fcsparser 解析原始数据；(2) 通过 FSC-A/SSC-A 散点图排除细胞碎片；(3) 基于 FSC-H/FSC-A 选出单个细胞；(4) 排除 DAPI 阳性死细胞；(5) 统计各药物处理组的 Alexa Fluor 647 平均荧光强度；(6) 使用 Dunnett 检验比较各处理组与 DMSO 对照；(7) 生成带显著性标记的柱状图。</p>
 </div>
 
-<a href="#" class="back-top">↑ 返回目录</a>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a>
 </section>
 <section id="sec-3">
 <h2>3. 核心结果：dAMD 治疗候选药物发现</h2>
@@ -602,7 +605,7 @@
 <div class="crossref">
 <strong>📎 知识链接：</strong>Ripasudil 的发现体现了"从已有药物中发现新用途"的重利用策略，这与 <a href="Yao_2025_Proteome_Wide_Genetic_zh.html">Yao et al. 卒中蛋白质组MR</a> 中 ALDH2 和 MMP12 作为"可重新利用靶点"的分类思路一致——ALDH2 已有>30项临床试验但<strong>非卒中</strong>，正如 ripasudil 已有临床使用但<strong>非dAMD</strong>。参见<a href="../knowledge_graph.html">知识图谱 → 药物重利用关联</a>。</div>
 
-<a href="#" class="back-top">↑ 返回目录</a>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a>
 </section>
 
 <section id="sec-4">
@@ -686,7 +689,7 @@ $$
 <p>LLM 评委的高自评一致性（88%）既是优势也是潜在风险——它可能反映了对某些措辞或呈现方式的系统性偏好，而非真正甄别科学质量。这一倾向可能限制了真正的"创新性"假设被选中的概率。</p>
 </div>
 
-<a href="#" class="back-top">↑ 返回目录</a>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a>
 </section>
 <section id="sec-5">
 <h2>5. 讨论与展望</h2>
@@ -739,7 +742,7 @@ $$
 <p>过去十年，FDA每年批准约50种新药，这一数字停滞不前。而全球有超过10,000种已知疾病——按这个速度，需要200年才能覆盖所有疾病。ROBIN 代表的 AI 驱动药物重利用方法，有潜力大幅加速这个过程：不是从头发现新分子，而是从已有药物中发现新用途——将历史数据中的隐藏关联转化为可测试的假设。</p>
 </div>
 
-<a href="#" class="back-top">↑ 返回目录</a>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a>
 </section>
 
 <section id="sec-6">
@@ -763,7 +766,7 @@ $$
 <p>ROBIN 是世界上第一个<strong>"从论文中读到灵感，提出假设，分析实验数据，并根据结果改进假设"</strong>的全自动AI科学家——虽然它还不完美，但它代表了科学发现自动化的重要一步。<strong>最令人震撼的不是它发现了什么，而是它如何发现的：通过阅读文献、推理机制、比较候选方案，最终到达了一个人类专家可能多年后才能到达的结论。</strong></p>
 </div>
 
-<a href="#" class="back-top">↑ 返回目录</a>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a>
 </section>
 
 <footer>
@@ -772,22 +775,22 @@ $$
 <a href="Skrivankova_2021_Strengthening_Reporting_Observational_zh.html">STROBE-MR</a>
 <a href="Sanderson_2022_Mendelian_randomization_zh.html">MR Primer</a>
 <a href="Larsson_2023_Mendelian_randomization_cardiovascular_zh.html">MR-CVD</a>
-<a href="Yao_2025_Proteome_Wide_Genetic_zh.html">卒中蛋白组MR</a>
-<a href="Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html">两步MR</a>
+<a href="Yao_2025_Proteome_Wide_Genetic_zh.html"><span data-zh>卒中蛋白组MR</span><span data-en>Proteome MR for Stroke</span></a>
+<a href="Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html"><span data-zh>两步MR</span><span data-en>Two-step MR</span></a>
 <a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">🔍 PISA</a>
 <a href="Salamone_2026_Trans-Regulatory_gene_mapping_zh.html">🔍 DANDELION</a>
-<a href="../nav/reading_path.html">阅读路径</a>
-<a href="../nav/knowledge_supplement.html">补充知识</a>
+<a href="../nav/reading_path.html"><span data-zh>阅读路径</span><span data-en>Reading Path</span></a>
+<a href="../nav/knowledge_supplement.html"><span data-zh>补充知识</span><span data-en>Background</span></a>
 <a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">PISA (Nat Commun 2026)</a>
-<a href="../knowledge_graph.html">知识图谱</a>
-<a class="pdf-na" title="原论文 PDF 未随展示库分发，可按论文名检索">原始PDF</a>
-<a href="https://arxiv.org/abs/2505.13400" target="_blank">arXiv原文</a>
+<a href="../knowledge_graph.html"><span data-zh>知识图谱</span><span data-en>Knowledge Graph</span></a>
+<a class="pdf-na" title="原论文 PDF 未随展示库分发，可按论文名检索"><span data-zh>原始PDF</span><span data-en>Original PDF</span></a>
+<a href="https://arxiv.org/abs/2505.13400" target="_blank"><span data-zh>arXiv原文</span><span data-en>arXiv Paper</span></a>
 </div>
 <p style="margin-top:16px;">
-<strong>论文信息：</strong>Ghareeb AE*, Chang B*, Mitchener L, et al. ROBIN: A Multi-Agent System for Automating Scientific Discovery. <em>arXiv:2505.13400</em>. May 2025.<br>
-<strong>机构：</strong>FutureHouse, San Francisco &amp; University of Oxford &nbsp;|&nbsp;
-<strong>代码：</strong>github.com/Future-House/robin<br>
-<strong>解读生成日期：</strong>2026-08-14 &nbsp;|&nbsp; 本文为AI辅助生成的中文学术解读。</p>
+<strong><span data-zh>论文信息：</span><span data-en>Paper info: </span></strong>Ghareeb AE*, Chang B*, Mitchener L, et al. ROBIN: A Multi-Agent System for Automating Scientific Discovery. <em>arXiv:2505.13400</em>. May 2025.<br>
+<strong><span data-zh>机构：</span><span data-en>Affiliations: </span></strong>FutureHouse, San Francisco &amp; University of Oxford &nbsp;|&nbsp;
+<strong><span data-zh>代码：</span><span data-en>Code: </span></strong>github.com/Future-House/robin<br>
+<strong><span data-zh>解读生成日期：</span><span data-en>Generated: </span></strong>2026-08-14 &nbsp;|&nbsp; <span data-zh>本文为AI辅助生成的中文学术解读。</span><span data-en>This is an AI-assisted Chinese academic interpretation.</span></p>
 </footer>
 
 <!-- 主题切换 + 入场渐显 + 阅读进度（与其余三个模板逐字相同） -->

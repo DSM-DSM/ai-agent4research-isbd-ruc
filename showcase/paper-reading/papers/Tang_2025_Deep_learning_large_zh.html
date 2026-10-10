@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LyMOI: 深度学习+LLM混合工作流用于组学解读 —— 详细中文解读</title>
   <link rel="icon" type="image/svg+xml" href="ruc-mark.svg">
-  <script src="../theme-pack.js"></script>
+  <script>window.A4R={mode:1,lang:1,themeKey:'paper-explainer-theme',lightId:'ruc',darkId:'ink-night'};</script>
+<script src="../../../a4r-bridge.js"></script>
+<style>html[data-lang="en"] [data-zh]{display:none!important}html[data-lang="zh"] [data-en]{display:none!important}</style>
+<script src="../theme-pack.js"></script>
   <style>
     /* ====================================================================
        1. 设计令牌 (Design Tokens) —— 默认主题「纸墨」，其余 7 套由
@@ -344,20 +347,20 @@
 <div class="progress" aria-hidden="true"></div>
 
 <div class="top-nav-bar">
-<span class="current">← 当前论文</span>
+<span class="current"><span data-zh>← 当前论文</span><span data-en>← Current paper</span></span>
 <a href="Skrivankova_2021_Strengthening_Reporting_Observational_zh.html">STROBE-MR</a>
 <a href="Sanderson_2022_Mendelian_randomization_zh.html">MR Primer</a>
 <a href="Larsson_2023_Mendelian_randomization_cardiovascular_zh.html">MR-CVD</a>
-<a href="Yao_2025_Proteome_Wide_Genetic_zh.html">卒中蛋白MR</a>
-<a href="Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html">两步MR</a>
+<a href="Yao_2025_Proteome_Wide_Genetic_zh.html"><span data-zh>卒中蛋白MR</span><span data-en>Stroke Proteome MR</span></a>
+<a href="Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html"><span data-zh>两步MR</span><span data-en>Two-step MR</span></a>
 <a href="Ghareeb_2025_Multi_Agent_System_zh.html">ROBIN</a>
 <a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">🔍 PISA</a>
 <a href="Salamone_2026_Trans-Regulatory_gene_mapping_zh.html">🔍 DANDELION</a>
-<a href="../nav/reading_path.html">阅读路径</a>
-<a href="../nav/knowledge_supplement.html">补充知识</a>
-<a href="../nav/mr_lecture.html">MR讲演</a>
+<a href="../nav/reading_path.html"><span data-zh>阅读路径</span><span data-en>Reading Path</span></a>
+<a href="../nav/knowledge_supplement.html"><span data-zh>补充知识</span><span data-en>Background</span></a>
+<a href="../nav/mr_lecture.html"><span data-zh>MR讲演</span><span data-en>MR Lecture</span></a>
 <a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">PISA (Nat Commun 2026)</a>
-<a href="../knowledge_graph.html">知识图谱</a>
+<a href="../knowledge_graph.html"><span data-zh>知识图谱</span><span data-en>Knowledge Graph</span></a>
 
 <a class="pdf-na" title="原论文 PDF 未随展示库分发，可按论文名检索">PDF</a>
 </div>
@@ -371,7 +374,7 @@
 </header>
 
 <nav class="toc">
-<h3>📑 目录</h3>
+<h3>📑 <span data-zh>目录</span><span data-en>Contents</span></h3>
 <ol>
 <li><a href="#sec-0">阅读导引：组学解读+AI的范式融合</a></li>
 <li><a href="#sec-1">研究背景：组学数据解读的瓶颈</a></li>
@@ -502,7 +505,7 @@ $$
 </div>
 
 <h3>LLM的机会与挑战</h3><p>ChatGPT/GPT-3.5 训练数据中包含大量生物医学知识，但它面临两个关键挑战：(1) <strong>知识截止到2022年1月</strong>——无法获取最新科学发现；(2) <strong>AI幻觉</strong>——会自信地说出看似合理但实际错误的回答。LyMOI通过精心设计的提示工程和混合架构来应对这些挑战。</p>
-<a href="#" class="back-top">↑ 返回目录</a></section>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a></section>
 <section id="sec-2"><h2>2. LyMOI 架构：GCN + LLM 混合框架</h2>
 <div class="intuition"><span class="tag">直观理解</span><p>LyMOI 的核心理念可以概括为"<strong>定量预测 + 定性推理</strong>"。图卷积网络（GCN）负责定量部分：在多组学数据和蛋白质相互作用网络中"算"出哪些分子最可能是关键调控因子。GPT-3.5 负责定性部分：用自然语言"写"出这些分子如何通过哪个信号通路调控生物过程的机制解释。</p></div>
 <p>原论文 Figure 1 把整个混合框架画成了一张管线总览图，正好与下面"三步工作流"逐一对应：左边是 GPT-3.5 零样本提示合成数据集，中间是大图模型（LGM）的预训练与条件特异性预测，右边是 LLM 对 MOIs 的分子关联推理：</p>
@@ -512,7 +515,7 @@ $$
 <p class="fig-caption"><strong>原论文 Figure 1：LyMOI 混合框架工作流总览。</strong>(a) 三步管线：① <strong>LLM 合成数据集</strong>——GPT-3.5 零样本提示为 4 个真核物种（人/小鼠/大鼠/酵母）的全基因组基因逐个生成"基因/蛋白→功能→过程→置信度(0-9)"的 PGP 表格（共 138,030 个提示）；② <strong>大图模型（LGM）预测</strong>——以含 562 物种、1,093,931 个蛋白、1.87 亿条互作/直系同源边的知识图谱加上 1.3TB 自噬相关多组学数据训练教师模型（自噬调控基因为标签），再微调出 SD-G/SD-N/DSF 等条件特异性学生模型，输出自噬 MOIs（如 CTSL、FAM98A）；③ <strong>LLM CoT 推理</strong>——对 MOIs 及其分子关联做机制解释，并延伸到砷毒性、乳腺癌转移与自闭症谱系障碍的解读。(b) 多组学数据规模：mRNA、蛋白质（Pro.）、磷酸化蛋白（Phos.）及三类差异分子（DEMs/DEPs/DRPs）的数量（log2 计数）。<br>图源：Tang et al., <em>Nature Biomedical Engineering</em> (2025)。</p>
 <div class="algorithm"><span class="tag">核心流程</span><h4>LyMOI 三步工作流</h4><p><strong>Step 1：LLM合成数据集</strong> —— GPT-3.5零样本提示生成56,980个prompt-generation pairs (PGPs)，为每个基因评估其参与自噬的置信度(0-9分)，作为扩展训练标签<br><strong>Step 2：大图模型(LGM)预训练+分层微调</strong> —— 构建含1.87亿PPI/互作关系的跨物种知识图谱 → GCN预训练(教师模型) → 34个条件的独立学生模型微调 → 预测条件特异性MOIs<br><strong>Step 3：LLM Chain-of-Thought推理</strong> —— 对预测的MOIs用GPT-3.5做机制解释，生成"机器CoT"，类似生物学家的因果推理过程</p></div>
 <div class="definition"><span class="tag">正式定义</span><h4>图卷积网络 (GCN)</h4><p>GCN是一种在图上进行深度学习的神经网络。在LGM中，每个节点是一个蛋白质，边是蛋白质-蛋白质相互作用。GCN通过<strong>消息传递(message passing)</strong>机制，让每个节点的特征向量聚合其邻居节点的信息，从而学习到同时反映自身表达水平和网络拓扑的特征表示。LyMOI中的GCN经过两轮预训练：先用6,502个已知自噬/细胞死亡基因做edge weight优化，再用1.3TB多组学数据做node weight优化。</p></div>
-<a href="#" class="back-top">↑ 返回目录</a></section>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a></section>
 <section id="sec-3"><h2>3. GPT-3.5 合成数据集与零样本提示</h2>
 <div class="intuition"><span class="tag">直观理解</span><p>让GPT-3.5判断"基因X是否参与自噬"很容易产生幻觉——当你随便问时它可能说"是"，但当你让它先总结基因功能再判断，它的准确率就大幅提升。LyMOI团队设计了精巧的<strong>零样本提示策略</strong>：让GPT-3.5先列出基因功能，再给出参与自噬的置信度(0-9分)。这种方法使GPT-3.5对"高置信度(>6)基因"的判断准确率达到83%(人类)、85%(小鼠)、77%(大鼠)、82%(酵母)。</p></div>
 <p>上面的"高置信准确率"只是这套评估的一个截面——原论文 Figure 2 用 16 个面板系统展示了 GPT-3.5/GPT-4o 在四个物种上的自噬基因解读能力，从阳性响应率、ROC/混淆矩阵、文献核对准确率到词云与 GO 富集逐一给出证据：</p>
@@ -522,7 +525,7 @@ $$
 <p class="fig-caption"><strong>原论文 Figure 2：用 LLM 对自噬过程做全基因组解读。</strong>(a) 零样本提示策略示意：LLM 先总结基因功能，再判断该基因是否与自噬相关并给出 0-9 分置信度。(b) 四物种中判定为潜在自噬相关（置信度>0）基因的阳性响应率：人 14.4%、大鼠 11.9%、小鼠 11.3%、酵母 11.9%。(c) 四物种直系同源蛋白维恩图（21 个 ATG 基因/自噬调控因子在 4 物种中高度保守）。(d-k) GPT-3.5 与 GPT-4o 在人/小鼠/大鼠/酵母上的性能评估：ROC 曲线与 AUC（d,f,h,j：GPT-3.5 为 0.66/0.73/0.71/0.72，GPT-4o 进一步提升为 0.74/0.74/0.73/0.76）及混淆矩阵（e,g,i,k：灵敏度 45.7%-55.7%，特异度 79.0%-91.6%——低假阳性）。(l) 置信度>6 的 PGP 经文献人工核对后的准确率：人 83.2%、小鼠 84.6%、大鼠 76.7%、酵母 82.4%。(m) 机器 CoT 关键词词云：除 autophagy/autophagosome 外，GPT-3.5 主要指向 mTOR 信号通路与降解机制。(n,o) 人（n）与酵母（o）正样本基因的 GO 富集分析（线粒体自噬、自噬体组装、巨自噬等条目显著富集，双尾超几何检验）。(p) GPT-3.5 对两个经典自噬基因的推理解读示例。<br>图源：Tang et al., <em>Nature Biomedical Engineering</em> (2025)。</p>
 <div class="theorem"><span class="tag">关键结果</span><h4>GPT-3.5 自噬知识解读性能</h4><table><tr><th>物种</th><th>AUC (GPT-3.5)</th><th>AUC (GPT-4o)</th><th>灵敏度</th><th>特异度</th><th>高置信准确率</th></tr><tr><td>人类</td><td>0.66</td><td>0.74</td><td>45.7%</td><td>82.2%</td><td>83.2%</td></tr><tr><td>小鼠</td><td>0.73</td><td>0.74</td><td>57.1%</td><td>79.0%</td><td>84.6%</td></tr><tr><td>大鼠</td><td>0.71</td><td>0.73</td><td>55.3%</td><td>91.6%</td><td>76.7%</td></tr><tr><td>酵母</td><td>0.72</td><td>0.76</td><td>55.7%</td><td>85.1%</td><td>82.4%</td></tr></table><p>低假阳性率(特异度79-92%)是关键——说明GPT-3.5不太会"编造"不存在的自噬关联。</p></div>
 <div class="warning"><span class="tag">幻觉依然存在</span><p>即便如此，机器CoT仍会产生幻觉。例如GPT-3.5描述Atg1磷酸化Atg18的关系——这在文献中没有报道。因此，LyMOI的所有预测都需要实验验证。这也是为什么LyMOI的设计是"AI辅助发现"而非"AI替代实验"。</p></div>
-<a href="#" class="back-top">↑ 返回目录</a></section>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a></section>
 <section id="sec-4"><h2>4. 大图模型（LGM）预训练与分层微调</h2>
 <div class="intuition"><span class="tag">直观理解</span><p>LyMOI的核心假设非常直觉化：如果一个蛋白质(1)与许多已知的自噬调控蛋白有直接相互作用，且(2)在特定条件下的多组学表达模式与已知调控因子相似，那么它很可能也是一个自噬调控因子。这个假设通过一个跨越562个物种的巨型蛋白质互作图谱来实现——大图模型(LGM)就像一张"蛋白质社交网络"，GCN在这个网络上学习"谁和谁是好朋友，谁是关键人物"。</p></div>
 <p>这套 LGM 的完整预训练管线与性能评估浓缩在原论文 Figure 3——从 PPI 构图、两轮预训练、教师-学生微调，到三个条件下与传统机器学习方法的 ROC 对比，正好与本节内容逐一对应：</p>
@@ -610,7 +613,7 @@ $$
 <p>$0.87 \gt 0.5$ → LyMOI 预测 Gin4 为"葡萄糖饥饿条件下的自噬调控因子"，输出排名和置信度。后续酵母 $GIN4$ 敲除实验证实：敲除株在葡萄糖饥饿下自噬活性显著降低。</p>
 </div>
 
-<a href="#" class="back-top">↑ 返回目录</a></section>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a></section>
 <section id="sec-5"><h2>5. 实验验证：4种酵母 + 2种人癌蛋白</h2>
 <div class="intuition"><span class="tag">直观理解</span><p>这才是论文的"硬核"部分——LyMOI 不仅做出了预测，还通过一系列湿实验验证了预测的正确性。在4个物种中验证了6个全新的自噬调控因子，其中最令人兴奋的是发现了CTSL和FAM98A这两个人癌蛋白在disulfiram诱导自噬中的关键作用——并由此推导出一个可立即测试的癌症联合治疗方案。</p></div>
 <p>酵母部分的全部验证证据汇总在原论文 Figure 4：面板 a-n 围绕葡萄糖饥饿下的 Gin4/Elm1（对应 5.1 节），面板 o-q 对应氮饥饿下的 Rvs167/Ste50（对应 5.2 节），正好与下面两小节逐一呼应：</p>
@@ -631,7 +634,7 @@ $$
 <div class="theorem"><span class="tag">核心突破</span><h4>CTSL 和 FAM98A 促进 disulfiram 诱导的自噬</h4><p>Disulfiram (DSF) 是一种FDA批准的戒酒药物，近年被发现具有抗癌活性。LyMOI 预测了DSF处理条件下的自噬调控因子，发现<strong>CTSL（组织蛋白酶L）和FAM98A</strong>在其中发挥关键作用：</p><ul><li>在HeLa细胞中沉默CTSL或FAM98A → DSF诱导的自噬减弱 → 癌细胞增殖被抑制</li><li>DSF + Z-FY-CHO（CTSL特异性抑制剂，此前用于预防SARS-CoV-2感染）联合治疗 → <strong>在小鼠体内强烈抑制肿瘤生长</strong></li></ul><p>这一发现的重要性在于：DSF已在临床使用数十年，Z-FY-CHO也已有人体安全性数据——这个联合治疗方案距离临床转化只有"一步之遥"。</p></div>
 <div class="crossref"><strong>📎 知识链接：</strong>CTSL/FAM98A的发现逻辑与<a href="Yao_2025_Proteome_Wide_Genetic_zh.html">Yao et al. 卒中蛋白质组MR</a>中ALDH2(已有多项临床试验但非卒中)和MMP12(已有针对其他疾病的药但非卒中)的"药物重利用"逻辑如出一辙——都是"已有人体使用经验的药/靶点 + 新的适应症"。也呼应了发现的ripasudil(青光眼药→dAMD)。参见<a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">PISA (Nat Commun 2026)</a>
 <a href="../knowledge_graph.html">知识图谱</a>。</div>
-<a href="#" class="back-top">↑ 返回目录</a></section>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a></section>
 <section id="sec-6"><h2>6. 跨系统扩展与讨论</h2>
 <p>在讨论跨系统扩展之前，先把上一节的发现推进一步：既然 CTSL/FAM98A 是 DSF 诱导自噬的关键因子，而 DSF 本身具有抗癌活性，那么这一对蛋白是否也参与癌症存活？原论文 Figure 6 用一条从富集分析、细胞增殖到小鼠荷瘤实验的完整证据链给出了肯定回答：</p>
 
@@ -654,7 +657,7 @@ $$
 <p>LyMOI 的 GCN 虽然通过注意力权重提供了部分可解释性，但尚未达到碱基分辨率的调控机制解读。<strong><a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">McAnany et al. (2026) — PISA</a></strong> 提出的二维归因矩阵方法正是解决这一问题的工具：将 sequence-to-function 模型的每个预测映射回输入碱基的贡献，实现从"哪些基因被调控"到"哪些碱基驱动了这种调控"的跨越。LyMOI 的蛋白互作网络推理与 PISA 的顺式调控序列解读，分别从<em>基因网络</em>和<em>DNA 序列</em>两个尺度解码生物学调控逻辑，两者结合可构成完整的多尺度组学解读框架。</p>
 </div>
 
-<a href="#" class="back-top">↑ 返回目录</a></section>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a></section>
 <section id="sec-7"><h2>7. 要点总结</h2>
 <div class="summary"><span class="tag">全文总结</span><ol>
 <li><strong>LyMOI 混合框架</strong>：首个将图卷积网络(GCN)与大语言模型(GPT-3.5)推理结合为单一工作流的组学解读平台。</li>
@@ -666,24 +669,24 @@ $$
 <li><strong>跨系统通用性</strong>：在6个附加生物系统(砷毒性/乳腺癌/自闭症/免疫/发育)展示可扩展性。</li>
 </ol></div>
 <div class="intuition"><span class="tag">一句话总结</span><p>LyMOI 是一套<strong>"GCN算数 + GPT讲故事"</strong>的混合系统——GCN在分子网络中精准定位关键调控因子，GPT-3.5用生物学家的语言解释它们如何工作。最重要的是，它不仅预测，还通过酵母敲除和小鼠肿瘤模型验证了这些预测，完成了"从计算到实验到潜在疗法"的完整闭环。</p></div>
-<a href="#" class="back-top">↑ 返回目录</a></section>
+<a href="#" class="back-top"><span data-zh>↑ 返回目录</span><span data-en>↑ Back to contents</span></a></section>
 <footer><div class="related-bar">
 <strong>📚 相关资源：</strong>
 <a href="Skrivankova_2021_Strengthening_Reporting_Observational_zh.html">STROBE-MR</a>
 <a href="Sanderson_2022_Mendelian_randomization_zh.html">MR Primer</a>
 <a href="Larsson_2023_Mendelian_randomization_cardiovascular_zh.html">MR-CVD</a>
-<a href="Yao_2025_Proteome_Wide_Genetic_zh.html">卒中蛋白MR</a>
-<a href="Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html">两步MR</a>
+<a href="Yao_2025_Proteome_Wide_Genetic_zh.html"><span data-zh>卒中蛋白MR</span><span data-en>Stroke Proteome MR</span></a>
+<a href="Yoshiji_2025_Integrative_proteogenomic_analysis_zh.html"><span data-zh>两步MR</span><span data-en>Two-step MR</span></a>
 <a href="Ghareeb_2025_Multi_Agent_System_zh.html">ROBIN</a>
 <a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">🔍 PISA</a>
 <a href="Salamone_2026_Trans-Regulatory_gene_mapping_zh.html">🔍 DANDELION</a>
-<a href="../nav/reading_path.html">阅读路径</a>
-<a href="../nav/knowledge_supplement.html">补充知识</a>
+<a href="../nav/reading_path.html"><span data-zh>阅读路径</span><span data-en>Reading Path</span></a>
+<a href="../nav/knowledge_supplement.html"><span data-zh>补充知识</span><span data-en>Background</span></a>
 <a href="McAnany_2026_Positional_Interpretation_Cis-Regulatory_zh.html">PISA (Nat Commun 2026)</a>
-<a href="../knowledge_graph.html">知识图谱</a>
+<a href="../knowledge_graph.html"><span data-zh>知识图谱</span><span data-en>Knowledge Graph</span></a>
 <a class="pdf-na" title="原论文 PDF 未随展示库分发，可按论文名检索">PDF</a>
 </div>
-<p style="margin-top:16px;"><strong>论文信息：</strong>Tang D, Zhang C, Zhang W, et al. A deep learning and large language hybrid workflow for omics interpretation. <em>Nature Biomedical Engineering</em>. 2025. DOI: 10.1038/s41551-025-01576-5<br><strong>机构：</strong>华中科技大学 &nbsp;|&nbsp; <strong>解读生成日期：</strong>2026-08-14</p>
+<p style="margin-top:16px;"><strong><span data-zh>论文信息：</span><span data-en>Paper info: </span></strong>Tang D, Zhang C, Zhang W, et al. A deep learning and large language hybrid workflow for omics interpretation. <em>Nature Biomedical Engineering</em>. 2025. DOI: 10.1038/s41551-025-01576-5<br><strong><span data-zh>机构：</span><span data-en>Affiliations: </span></strong><span data-zh>华中科技大学</span><span data-en>Huazhong University of Science and Technology</span> &nbsp;|&nbsp; <strong><span data-zh>解读生成日期：</span><span data-en>Generated: </span></strong>2026-08-14</p>
 </footer>
 
 <!-- 主题切换 + 入场渐显 + 阅读进度（与其余三个模板逐字相同） -->
