@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-16T00:00:00Z",
+  "title": "Design System: AI × 科研 · 能力汇报（commerical-lecture 模板）",
+  "extensions": {
+    "colorMeta": {
+      "primary":            { "role": "accent",  "displayName": "Lavender Glow 薰衣草光", "canonical": "#cbb7fb", "tonalRamp": ["oklch(15% 0.06 300)", "oklch(27% 0.06 300)", "oklch(38% 0.06 300)", "oklch(50% 0.06 300)", "oklch(62% 0.055 300)", "oklch(73% 0.055 300)", "oklch(84% 0.05 300)", "oklch(95% 0.04 300)"] },
+      "neutral-bg":         { "role": "neutral", "displayName": "Midnight Canvas 午夜底", "canonical": "#08090a", "tonalRamp": ["oklch(8% 0.003 250)", "oklch(16% 0.003 250)", "oklch(24% 0.003 250)", "oklch(32% 0.003 250)", "oklch(44% 0.002 250)", "oklch(58% 0.002 250)", "oklch(74% 0.001 250)", "oklch(92% 0.001 250)"] },
+      "surface-1":          { "role": "neutral", "displayName": "Surface One", "canonical": "#0f1011", "tonalRamp": ["oklch(10% 0.003 250)", "oklch(18% 0.003 250)", "oklch(26% 0.003 250)", "oklch(34% 0.003 250)", "oklch(46% 0.002 250)", "oklch(60% 0.002 250)", "oklch(76% 0.001 250)", "oklch(92% 0.001 250)"] },
+      "surface-2":          { "role": "neutral", "displayName": "Surface Two", "canonical": "#17181c", "tonalRamp": ["oklch(12% 0.003 250)", "oklch(20% 0.003 250)", "oklch(28% 0.003 250)", "oklch(36% 0.003 250)", "oklch(48% 0.002 250)", "oklch(62% 0.002 250)", "oklch(78% 0.001 250)", "oklch(93% 0.001 250)"] },
+      "deep":               { "role": "neutral", "displayName": "Twilight Deep 深紫", "canonical": "#1b1938", "tonalRamp": ["oklch(12% 0.02 292)", "oklch(20% 0.03 292)", "oklch(28% 0.03 292)", "oklch(38% 0.03 292)", "oklch(50% 0.025 292)", "oklch(64% 0.02 292)", "oklch(78% 0.015 292)", "oklch(92% 0.01 292)"] },
+      "deep-0":             { "role": "neutral", "displayName": "Void Deep 深紫底", "canonical": "#0b0a1c", "tonalRamp": ["oklch(10% 0.02 292)", "oklch(18% 0.025 292)", "oklch(26% 0.025 292)", "oklch(36% 0.025 292)", "oklch(48% 0.02 292)", "oklch(62% 0.015 292)", "oklch(76% 0.012 292)", "oklch(91% 0.008 292)"] },
+      "border":             { "role": "neutral", "displayName": "Whisper Border", "canonical": "rgba(255,255,255,.08)", "tonalRamp": [] },
+      "border-soft":        { "role": "neutral", "displayName": "Soft Border", "canonical": "rgba(255,255,255,.05)", "tonalRamp": [] },
+      "cream":              { "role": "cta",     "displayName": "Warm Cream 暖奶油", "canonical": "#e9e5dd", "tonalRamp": ["oklch(60% 0.015 85)", "oklch(68% 0.015 85)", "oklch(75% 0.015 85)", "oklch(82% 0.015 85)", "oklch(88% 0.012 85)", "oklch(92% 0.01 85)", "oklch(95% 0.008 85)", "oklch(98% 0.005 85)"] },
+      "cream-ink":          { "role": "neutral", "displayName": "Cream Ink 奶油墨", "canonical": "#292827", "tonalRamp": ["oklch(16% 0.005 85)", "oklch(24% 0.005 85)", "oklch(32% 0.005 85)", "oklch(40% 0.005 85)", "oklch(50% 0.004 85)", "oklch(62% 0.004 85)", "oklch(74% 0.003 85)", "oklch(90% 0.002 85)"] },
+      "text-hi":            { "role": "neutral", "displayName": "Text Hi", "canonical": "#f7f8f8", "tonalRamp": [] },
+      "text-mid":           { "role": "neutral", "displayName": "Text Mid（正文 .85）", "canonical": "rgba(255,255,255,.85)", "tonalRamp": [] },
+      "text-low":           { "role": "neutral", "displayName": "Text Low", "canonical": "rgba(255,255,255,.58)", "tonalRamp": [] },
+      "text-faint":         { "role": "neutral", "displayName": "Text Faint", "canonical": "rgba(255,255,255,.36)", "tonalRamp": [] },
+      "atmosphere-indigo":  { "role": "neutral", "displayName": "Atmosphere Indigo 冷靛大气", "canonical": "#5e6ad2", "tonalRamp": [] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display", "purpose": "Hero 主标题两行（含 <span class=\"hl\"> 标紫）。" },
+      "headline": { "displayName": "Headline", "purpose": "段落大标题（overview / closing）。" },
+      "title":    { "displayName": "Title", "purpose": "slide 标题、skill 名、预览卡标题。" },
+      "body":     { "displayName": "Body", "purpose": "标准正文，行高 1.75。" },
+      "label":    { "displayName": "Label / Mono", "purpose": "编号、技术标签、rail 计数（mono 小字）。" },
+      "numeral":  { "displayName": "Numeral", "purpose": "章号、预览卡大数字、指标值——weight 300 轻盈权威。" }
+    },
+    "shadows": [
+      { "name": "float", "value": "0 24px 48px -16px rgba(0,0,0,.55), 0 8px 16px -8px rgba(10,8,30,.4)", "purpose": "唯一真实投影，仅用于产品截图框 .shot（Stripe 蓝调多层影）。" }
+    ],
+    "motion": [
+      { "name": "ease-out",   "value": "cubic-bezier(.23,1,.32,1)",   "purpose": "入场 / reveal / 按压 / 下划线展开的默认缓动。" },
+      { "name": "ease-inout", "value": "cubic-bezier(.77,0,.175,1)", "purpose": "slide 翻页过渡（560ms）。" },
+      { "name": "duration-fast",    "value": "160ms", "purpose": "按压 / hover 位移。" },
+      { "name": "duration-standard", "value": "200-300ms", "purpose": "颜色、边框、下划线过渡。" },
+      { "name": "duration-slide",  "value": "560ms", "purpose": "章节 slide 切换。" }
+    ],
+    "breakpoints": [
+      { "name": "lg", "value": "1024px" },
+      { "name": "md", "value": "760px" },
+      { "name": "sm", "value": "480px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button（奶油 CTA）",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "主行动号召，只出现在 hero 与 closing。暖奶油底 + 墨字。",
+      "html": "<button class=\"ds-btn-primary\">开始演示</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:10px;background:#e9e5dd;color:#292827;font-size:15px;font-weight:500;padding:12px 28px;border:none;border-radius:6px;cursor:pointer;transition:transform 160ms cubic-bezier(.23,1,.32,1), background-color 200ms ease;}.ds-btn-primary:hover{background:#f4f1ea;}.ds-btn-primary:active{transform:scale(.97);}.ds-btn-primary:focus-visible{outline:2px solid #cbb7fb;outline-offset:3px;}"
+    },
+    {
+      "name": "Ghost Button（描边钮）",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "次级行动，透明底 + 半透明白边。",
+      "html": "<button class=\"ds-btn-ghost\">浏览全部产出</button>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;gap:10px;background:transparent;color:rgba(255,255,255,.85);font-size:15px;padding:11px 27px;border:1px solid rgba(255,255,255,.08);border-radius:6px;cursor:pointer;transition:transform 160ms cubic-bezier(.23,1,.32,1), background-color 200ms ease, border-color 200ms ease, color 200ms ease;}.ds-btn-ghost:hover{background:rgba(255,255,255,.05);color:#f7f8f8;border-color:rgba(255,255,255,.18);}.ds-btn-ghost:active{transform:scale(.97);}.ds-btn-ghost:focus-visible{outline:2px solid #cbb7fb;outline-offset:3px;}"
+    },
+    {
+      "name": "Deck Nav Button（圆形翻页钮）",
+      "kind": "button",
+      "refersTo": "deck-btn",
+      "description": "章节底部 44px 圆形 prev/next 按钮，内嵌 16px SVG 箭头。",
+      "html": "<button class=\"ds-deck-btn\" aria-label=\"下一页\"><svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 3l4.5 5L6 13\"/></svg></button>",
+      "css": ".ds-deck-btn{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);color:rgba(255,255,255,.85);display:grid;place-items:center;cursor:pointer;transition:transform 160ms cubic-bezier(.23,1,.32,1), border-color 200ms ease, color 200ms ease, background-color 200ms ease;}.ds-deck-btn svg{width:16px;height:16px;}.ds-deck-btn:hover{border-color:rgba(203,183,251,.5);color:#f7f8f8;background:rgba(255,255,255,.05);}.ds-deck-btn:active{transform:scale(.97);}.ds-deck-btn:focus-visible{outline:2px solid #cbb7fb;outline-offset:3px;}"
+    },
+    {
+      "name": "Chapter Nav（章节导航钮）",
+      "kind": "nav",
+      "refersTo": "chapter-nav-btn",
+      "description": "顶栏章节导航，mono 章号 + 标题，scaleX 下划线作激活态。",
+      "html": "<button class=\"ds-chapter-nav on\"><span class=\"ds-cn\">01</span><span class=\"ds-cl\">个人科研开展</span></button>",
+      "css": ".ds-chapter-nav{position:relative;display:flex;align-items:baseline;gap:8px;background:none;border:none;color:rgba(255,255,255,.58);font-size:14px;padding:6px 0;cursor:pointer;transition:color 200ms ease, transform 160ms cubic-bezier(.23,1,.32,1);}.ds-chapter-nav .ds-cn{font-family:ui-monospace,'SF Mono','Cascadia Mono',Consolas,'Segoe UI Mono',monospace;font-size:12px;color:rgba(255,255,255,.36);transition:color 200ms ease;}.ds-chapter-nav:hover{color:#f7f8f8;}.ds-chapter-nav:active{transform:scale(.97);}.ds-chapter-nav::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:#cbb7fb;border-radius:1px;transform:scaleX(0);transform-origin:left;transition:transform 300ms cubic-bezier(.23,1,.32,1);}.ds-chapter-nav.on{color:#f7f8f8;}.ds-chapter-nav.on .ds-cn{color:#cbb7fb;}.ds-chapter-nav.on::after{transform:scaleX(1);}"
+    },
+    {
+      "name": "Chip（药丸标签）",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "线序言页展示该线 skill 名列表。",
+      "html": "<span class=\"ds-chip\">Skill ①</span>",
+      "css": ".ds-chip{padding:6px 14px;border:1px solid rgba(255,255,255,.08);border-radius:9999px;font-size:13px;color:rgba(255,255,255,.85);background:rgba(255,255,255,.02);}"
+    },
+    {
+      "name": "Preview Card（预览卡）",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "overview 三线入口卡，首卡 featured 全宽，其余半宽。",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-card-no\">01</span><div class=\"ds-card-body\"><h3 class=\"ds-card-title\">个人科研开展</h3><p class=\"ds-card-theme\">一个人如何用 AI 提速自己的研究</p></div><span class=\"ds-card-go\">进入章节 →</span></a>",
+      "css": ".ds-card{display:flex;flex-direction:column;gap:12px;border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:28px 32px;background:rgba(255,255,255,.02);color:inherit;text-decoration:none;transition:transform 200ms cubic-bezier(.23,1,.32,1), border-color 200ms ease, background-color 200ms ease;}.ds-card:hover{border-color:rgba(203,183,251,.45);background:rgba(255,255,255,.04);transform:translateY(-2px);}.ds-card:active{transform:scale(.97);}.ds-card-no{font-size:34px;font-weight:300;letter-spacing:-.01em;color:#cbb7fb;line-height:1;font-variant-numeric:tabular-nums;}.ds-card-title{font-size:17px;font-weight:500;color:#f7f8f8;letter-spacing:.01em;}.ds-card-theme{margin-top:6px;font-size:14px;color:rgba(255,255,255,.58);}.ds-card-go{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.36);}.ds-card:hover .ds-card-go{color:#cbb7fb;}"
+    },
+    {
+      "name": "Product Shot Frame（产品截图框）",
+      "kind": "card",
+      "refersTo": "shot",
+      "description": "slide「产出」列的截图容器，唯一带投影的元素；留空时渲染诚实占位框。",
+      "html": "<div class=\"ds-shot\"><div class=\"ds-shot-ph\">产品截图占位</div></div>",
+      "css": ".ds-shot{border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden;background:#0f1011;box-shadow:0 24px 48px -16px rgba(0,0,0,.55), 0 8px 16px -8px rgba(10,8,30,.4);}.ds-shot img,.ds-shot svg{width:100%;height:auto;display:block;}.ds-shot-ph{display:grid;place-items:center;aspect-ratio:320/190;color:rgba(255,255,255,.42);font-size:12px;border:1px dashed rgba(255,255,255,.14);border-radius:6px;margin:12px;}"
+    },
+    {
+      "name": "Rail Dot（章节侧栏进度点）",
+      "kind": "custom",
+      "refersTo": "rail-dot",
+      "description": "章节左侧竖向进度点，当前页点亮并带薰衣草光晕。",
+      "html": "<span class=\"ds-rail\"><i class=\"ds-rail-dot on\"></i><i class=\"ds-rail-dot\"></i><i class=\"ds-rail-dot\"></i><i class=\"ds-rail-dot\"></i></span>",
+      "css": ".ds-rail{display:flex;flex-direction:column;align-items:center;gap:12px;}.ds-rail-dot{width:7px;height:7px;border-radius:50%;border:1px solid rgba(255,255,255,.28);transition:border-color 300ms ease, background-color 300ms ease, box-shadow 300ms ease;}.ds-rail-dot.on{border-color:#cbb7fb;background:#cbb7fb;box-shadow:0 0 8px rgba(203,183,251,.5);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "星夜叙事轴（The Starlit Axis）",
+    "overview": "这是一场在暗色星空下展开的能力汇报：页面不是组件陈列，而是一条从「个人」走向「团队」、最终「汇于一处」的叙事轴。暗场底色（Linear #08090a）是黑夜本身，内容如星光浮出；唯一强调色薰衣草紫（Superhuman #cbb7fb）收束为一个 signature——沿着脊柱滚动的脉冲光点，沿途点亮三个节点，最后在汇流处汇聚成核心光。整个系统靠「一条线、一个光点」完成 AI 元素的表达，拒绝堆砌。",
+    "keyCharacteristics": [
+      "暗色原生基底 #08090a，层级靠白透明度（rgba(255,255,255,.02 面 / .05 / .08 边框）而非色彩",
+      "单一交互 accent 薰衣草紫 #cbb7fb；冷靛 #5e6ad2 仅以 4%–12% 低透明度存在于星云与章节背景的「大气」中",
+      "暖奶油 #e9e5dd 主 CTA + 深墨 #292827，是唯一高饱和反色",
+      "系统字体栈（中文合规），无 CDN 字体、无斜体",
+      "轻字重大数字（weight 300）+ 中等字重标题（weight 500）",
+      "叙事轴脉冲光点 signature，零偏移薰衣草光晕",
+      "混合式交互：开场自然滚动 → 三章全屏 slide deck → 汇流收尾"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "交互色只有薰衣草紫 #cbb7fb 一个。冷靛 #5e6ad2 是「大气」而非 accent：它只存在于低透明度星云/背景光斑中，永不得上到文字、边框、按钮或任何可交互元素。", "section": "colors" },
+      { "name": "The Whisper Border Rule", "body": "边框永远是半透明白（.05 或 .08），从不用不透明深色实线。", "section": "colors" },
+      { "name": "The 300-Numeral Rule", "body": "大数字永远 weight 300。标题 500、正文 400、数字 300；无 700 粗体。", "section": "typography" },
+      { "name": "The No-Negative-CJK Rule", "body": "负字距只出现在纯半角数字/章号元素上；含中文字符的文本一律正字距或 0。", "section": "typography" },
+      { "name": "The No-Italic Rule", "body": "全站不出现斜体。em 与 i 仅作语义标签，样式强制 font-style: normal。", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "面在静止时无阴影，靠边框与亮度分层；阴影只出现在需要「悬浮」的截图框上。", "section": "elevation" },
+      { "name": "The Small-Radius Rule", "body": "圆角只用 6px（按钮）/ 8px（截图框）/ 12px（卡片）/ 药丸（chip）/ 圆（deck 钮与 rail 点），无大圆角。", "section": "shapes" }
+    ],
+    "dos": [
+      "Do 用系统字体栈渲染全部中文；永不引入 CDN/webfont。",
+      "Do 主 CTA 用暖奶油 #e9e5dd + 墨字 #292827，不用纯白或饱和色。",
+      "Do 让薰衣草 #cbb7fb 以小面积「光点 / 细线」出现。",
+      "Do 边框用半透明白（.05 / .08），层级用面亮度分层（.02 → .04 → .05）。",
+      "Do 大数字用 weight 300 + tabular-nums，标题 500，正文 400。",
+      "Do 数字用半角 + mono 或 tabular-nums，中西文之间留盘古之白空格。",
+      "Do 图标用内联 SVG（16px 圆头描边），不用图标字体、不用 emoji。",
+      "Do 任何位移/动画配 prefers-reduced-motion 降级。"
+    ],
+    "donts": [
+      "Don't 引入第二个交互 accent——冷靛 #5e6ad2 只作星云大气。",
+      "Don't 用纯白 #ffffff 作文本——主文本 #f7f8f8，正文 .85 白。",
+      "Don't 给中文字符施加负字距。",
+      "Don't 使用斜体。",
+      "Don't 使用硬偏移阴影或大面积投影——阴影仅 --shadow-float 一处。",
+      "Don't 用不透明深色实线边框，或给面铺不透明填充块。",
+      "Don't 把占位文案伪装成真实内容。",
+      "Don't 堆叠 AI 元素——AI 表达收敛为一个 signature。"
+    ]
+  }
+}

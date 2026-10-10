@@ -1,0 +1,633 @@
+{
+ "meta": {
+  "brand": "AI × 科研",
+  "title_line1": "从个人到团队：",
+  "title_line2": "<span class=\"hl\">AI 驱动</span>的科研实践",
+  "subtitle": "一个人用 AI 的能力，如何生长为一支团队的生产力——四条叙事线，一个终点。每条线都有可打开、可核对的真实产物。",
+  "presenter": "俞锦越",
+  "institution": "中国人民大学-统计与大数据研究院",
+  "date": "2026-08",
+  "hero_cta": "开始演示"
+ },
+ "overview": {
+  "heading": "四条线，一个终点",
+  "lede": "前三条线展示 skill 从个人到团队的生长路径——所用技能、技能产出的产品、技能如何被构建；第四条线分享其余值得一试的技能。全部内容来自本地真实文件。",
+  "metrics": [
+   {
+    "value": "10",
+    "label": "沉淀技能与规范"
+   },
+   {
+    "value": "14",
+    "label": "接力棒交接（.baton）"
+   },
+   {
+    "value": "13",
+    "label": "方向文档 M1–M13"
+   }
+  ],
+  "metrics_note": "数据来自本地真实文件：技能目录、.baton/ 与 meeting_records/ 归档。"
+ },
+ "lines": [
+  {
+   "no": "01",
+   "title": "个人科研开展",
+   "theme": "一个人如何用 AI 提速自己的研究",
+   "intro": "这条线讲个人科研中的两个 AI 技能：把论文与代码对照讲透的 paper-explainer，以及在会话之间交接上下文的 baton。一个负责把复杂的弄明白，一个负责把做了一半的接住。",
+   "skills": [
+    {
+     "name": "paper-explainer · 科研领域 AI 导读",
+     "tagline": "陌生科研领域的入门向导：批量精读论文 PDF，按行文逻辑讲解，并生成可动态更新的知识图谱。",
+     "purpose": "接触一个陌生领域，不再逐篇啃 PDF：把搜集到的若干篇论文交给它，每篇生成一份沿行文逻辑、由浅入深的讲解网页；全部读完后，再生成一张跨论文知识点关联的知识图谱网页；后续追加新论文，两个网页都会动态更新。",
+     "capabilities": [
+      "多 PDF 批量精读：每篇一份梗概 + 沿行文逻辑由浅入深的讲解网页",
+      "跨论文知识图谱：梳理各篇知识点之间的关联，独立 HTML 输出",
+      "增量更新：追加新论文后，单篇解析与知识图谱动态同步"
+     ]
+    },
+    {
+     "name": "baton · 会话接力棒",
+     "tagline": "把一次会话做了什么、卡在哪、结果与偏好落盘成接力棒，让下一个（多个）AI 会话直接接住上下文。",
+     "purpose": "AI 会话切换会丢失全部上下文。baton 把「做了什么、遇到什么困难、得到什么结果、以及个人偏好」写进一个 markdown 接力棒，交给下一个会话继续跑；接力棒文件多了，还支持合并汇总——既压缩后续会话的上下文输入，也让交接记录成为可管理的数据资产。",
+     "capabilities": [
+      "上下文迁移：落棒、接棒、并棒，交接「进展、困难、结果与偏好」",
+      "文件多了可合并汇总，压缩上下文输入，交接记录成为数据资产",
+      "Iron Rule：落盘前 git 核对真实状态；本仓库 .baton/ 已有 14 份"
+     ],
+     "links": [
+      {
+       "label": "baton · GitHub 仓库",
+       "url": "https://github.com/blader/baton"
+      }
+     ]
+    }
+   ],
+   "outcomes": {
+    "products": [
+     {
+      "name": "论文讲解网页 × 知识图谱",
+      "desc": "多 PDF 精读产出的讲解网页：梗概、行文逻辑、公式与代码对照；配套跨论文知识图谱。",
+      "shot": "assets/line01-a.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "批量精读",
+        "desc": "多篇论文 PDF 一次输入，逐篇提取梗概与行文逻辑。"
+       },
+       {
+        "step": "02",
+        "title": "讲解成文",
+        "desc": "每篇按由浅入深的结构生成独立讲解网页。"
+       },
+       {
+        "step": "03",
+        "title": "图谱关联",
+        "desc": "梳理跨论文知识点关联，生成知识图谱网页。"
+       },
+       {
+        "step": "04",
+        "title": "增量更新",
+        "desc": "追加新论文后，单篇解析与知识图谱动态同步。"
+       }
+      ]
+     },
+     {
+      "name": "接力棒文件（.baton）",
+      "desc": "交接「进展、困难、结果与偏好」；文件多了可合并汇总，交接记录成为数据资产。",
+      "shot": "assets/line01-b.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "识别痛点",
+        "desc": "会话切换丢失上下文，换窗口一切都要从头解释。"
+       },
+       {
+        "step": "02",
+        "title": "定义铁律",
+        "desc": "落盘前先 git 核对真实状态，记录现实而非叙述。"
+       },
+       {
+        "step": "03",
+        "title": "封装 Skill",
+        "desc": "落棒、接棒、并棒三种用法，固定文件名与 .baton 目录。"
+       },
+       {
+        "step": "04",
+        "title": "真实迭代",
+        "desc": "14 份接力棒覆盖 git 协作、增量管线、讲演材料多主题。"
+       }
+      ]
+     }
+    ],
+    "metrics": [
+     {
+      "value": "14",
+      "label": "本仓库接力棒文件"
+     },
+     {
+      "value": "8+",
+      "label": "覆盖主题"
+     }
+    ],
+    "build": [
+     {
+      "step": "01",
+      "title": "识别重复",
+      "desc": "找出研究中反复出现的手工环节：读论文对照代码、会话切换后重新解释上下文。"
+     },
+     {
+      "step": "02",
+      "title": "定义规范",
+      "desc": "把经验固化为规则：解释文档的章节结构，接力棒的「先验证再落盘」铁律。"
+     },
+     {
+      "step": "03",
+      "title": "封装 Skill",
+      "desc": "以提示词与工具组合封装为可调用的 skill，每次自动套用同一套流程。"
+     },
+     {
+      "step": "04",
+      "title": "迭代验证",
+      "desc": "在真实任务上反复使用并修订：14 份接力棒与解释文档本身就是迭代记录。"
+     }
+    ]
+   }
+  },
+  {
+   "no": "02",
+   "title": "团队科研协作",
+   "theme": "一群人如何用 AI 对齐工作方式",
+   "intro": "这条线讲团队协作中的两个抓手：meeting-to-wechat 把会议纪要压缩成微信群可用的精简消息，CONTRIBUTING.md 用约定式提交与 AI 智能体 SOP 规范整个仓库的协作。一个对齐信息，一个对齐代码。",
+   "skills": [
+    {
+     "name": "meeting-to-wechat · 会议纪要转微信群消息",
+     "tagline": "从语音转写稿、会议纪要与时间轴中提取核心信息，生成可直接粘贴微信群的 300 字内消息。",
+     "purpose": "会后整理纪要是最枯燥的体力劳动。把会议导出的 txt 三件套交给它，直接生成可粘贴微信群的 300 字内消息；而它产出的纪要梗概不只用于同步——还能作为每个队员的初始研究方案，成为后续任务展开的起点。",
+     "capabilities": [
+      "会议 txt 三件套直接生成微信可粘贴消息，免除会后纪要的体力劳动",
+      "纪要梗概一稿两用：同步到群里 + 作为每个队员的初始研究方案",
+      "专业名词知识库：16 位人名 + 50 余条术语，转写错误自动修正"
+     ]
+    },
+    {
+     "name": "git 协作规范 · CONTRIBUTING.md",
+     "tagline": "一份写给人和 AI 智能体的仓库协作规范：分支命名、约定式提交、PR 与 Code Review 流程。",
+     "purpose": "多人协作的仓库最容易乱在提交历史：「update」「fix bug」式的提交让回溯无从下手。CONTRIBUTING.md 统一了日常开发六步流程（同步、分支、提交、推送、PR、审查）、约定式提交格式（feat/fix/docs + 中文描述），以及 AI 智能体的操作 SOP 与禁止行为清单——AI 提交也必须过同一套规范。本仓库 90 条提交历史即为实践。",
+     "capabilities": [
+      "约定式提交：type 用英文、描述用中文，一行 50 字内、动词开头",
+      "分支命名五前缀：feature / fix / docx / refactor / experiment，保护规则强制 PR 合并",
+      "AI 智能体 SOP：环境检查、分支、提交、PR 全流程 + 8 条禁止行为（禁 force push 等）"
+     ]
+    }
+   ],
+   "outcomes": {
+    "products": [
+     {
+      "name": "微信群精简消息",
+      "desc": "会后同步：TL;DR 加共识/问题/任务，或待确认问题清单，可直接粘贴微信群。",
+      "shot": "assets/line02-a.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "识别痛点",
+        "desc": "会议三件套冗长、转写含同音错字，直接发群里没人读。"
+       },
+       {
+        "step": "02",
+        "title": "约定规则",
+        "desc": "纪要 > 时间轴 > 转写分级裁决，300 字与每行 30 字硬约束。"
+       },
+       {
+        "step": "03",
+        "title": "封装 Skill",
+        "desc": "内部组会与企业研讨会两种语气，专业名词知识库持续积累。"
+       },
+       {
+        "step": "04",
+        "title": "落盘迭代",
+        "desc": "md + 纯文本双输出并用 ls 验证落盘，知识库随每次会议扩充。"
+       }
+      ]
+     },
+     {
+      "name": "CONTRIBUTING.md 协作规范",
+      "desc": "仓库级多人协作规范：日常开发六步流程、提交规范、审查礼仪、AI 智能体 SOP。",
+      "shot": "assets/line02-b.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "识别混乱",
+        "desc": "提交历史满是 update、fix bug，回溯无从下手。"
+       },
+       {
+        "step": "02",
+        "title": "约定规则",
+        "desc": "约定式提交：type 英文 + 中文描述，一行 50 字内、动词开头。"
+       },
+       {
+        "step": "03",
+        "title": "写入规范",
+        "desc": "六步开发流程、PR 审查礼仪、AI 智能体 SOP 与禁止清单。"
+       },
+       {
+        "step": "04",
+        "title": "全员实践",
+        "desc": "90 条规范提交，人与 AI 智能体走同一套流程。"
+       }
+      ]
+     }
+    ],
+    "metrics": [
+     {
+      "value": "90",
+      "label": "本仓库规范提交"
+     },
+     {
+      "value": "16",
+      "label": "知识库人名条目"
+     }
+    ],
+    "build": [
+     {
+      "step": "01",
+      "title": "识别分歧",
+      "desc": "找出协作中口径不一、反复沟通的环节：会议信息冗长没人读、提交历史无从回溯。"
+     },
+     {
+      "step": "02",
+      "title": "约定规则",
+      "desc": "与团队确认裁决规则：信息源准确率分级、约定式提交与分支保护。"
+     },
+     {
+      "step": "03",
+      "title": "封装 Skill / 写入规范",
+      "desc": "meeting-to-wechat 封装为 skill；提交与 PR 流程写入 CONTRIBUTING.md。"
+     },
+     {
+      "step": "04",
+      "title": "交接扩展",
+      "desc": "规范落到人与 AI 两类执行者：AI 智能体 SOP 让机器也遵守同一套流程。"
+     }
+    ]
+   }
+  },
+  {
+   "no": "03",
+   "title": "从个人到团队",
+   "theme": "个人沉淀的能力，如何成为团队的基础设施",
+   "intro": "这条线讲个人技能如何长成团队设施：meeting-to-wechat 的群消息只是入口，后续是完整的会议记录归档——每次会议按日期建目录、原始三件套落盘，再把讨论提炼成 M 系列方向文档，状态可追踪、方向互相引用。接力棒、知识图谱、会议纪要、M 系列文档——过程性信息就此沉淀为可复用的数据资产。",
+   "skills": [
+    {
+     "name": "会议记录归档 · meeting_records/",
+     "tagline": "把每次会议沉淀为可回溯的目录：原始记录、方向文档、README 索引，状态一目了然。",
+     "purpose": "会开完了，信息不该停在群里。meeting_records/ 的归档规范是：每次会议一个日期目录，腾讯会议三件套（逐字稿、时间轴、纪要）原样落盘；讨论出的研究方向各自成档，材料齐全（文档 + notebook + 图 + 结果 JSON）；目录级 README 提供系列索引、状态总览与方向关系图。新成员进组，读归档即可接上上下文。",
+     "capabilities": [
+      "按日期归档 + 原始三件套落盘，一切结论可回溯到会议原话",
+      "研究方向子目录材料齐全：markdown 主文档 + notebook + 图 + 结构化结果",
+      "README 索引：系列索引表、状态总览、方向关系图、更新日志，跨会议交叉引用"
+     ]
+    },
+    {
+     "name": "meeting-to-execution-plan-docs · M 系列任务文档",
+     "tagline": "把会议梗概拆解为编号任务 M1、M2……每个 mission 一份可直接交给 AI Agent 执行的方向文档。",
+     "purpose": "它直接接收 meeting-to-wechat 产出的会议梗概，把讨论内容拆解成若干个编号任务——M1（Mission 1）、M2……每个 mission 一份 markdown：写明问题动机与可能尝试的方向，拿到文档的 AI Agent 无需再读会议原文就能直接开工。目前已积累 M1–M13。",
+     "capabilities": [
+      "上游接 meeting-to-wechat：会议梗概直接拆解为编号任务 M1 / M2 / …",
+      "每个 mission 一份方向文档：动机 + 可能尝试的方向，可直接交给 AI Agent 执行",
+      "三种输入形态：有编号归类 / 无编号提炼并延续编号 / 核查补录"
+     ]
+    }
+   ],
+   "outcomes": {
+    "products": [
+     {
+      "name": "meeting_records/ 归档目录",
+      "desc": "三次会议三个日期目录，M1–M13 方向文档与原始记录全部可回溯。",
+      "shot": "assets/line03-a.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "沉淀复用",
+        "desc": "群消息发完即弃，讨论要点随聊天记录一起消失。"
+       },
+       {
+        "step": "02",
+        "title": "归档规范",
+        "desc": "日期目录 + 三件套落盘 + 方向子目录，材料齐全才算闭环。"
+       },
+       {
+        "step": "03",
+        "title": "README 索引",
+        "desc": "系列索引表、状态总览、方向关系图、更新日志一页看清。"
+       },
+       {
+        "step": "04",
+        "title": "跨会互引",
+        "desc": "方向文档互引形成闭环，新成员读归档即可接手。"
+       }
+      ]
+     },
+     {
+      "name": "M 系列方向文档（M1–M13）",
+      "desc": "会议梗概拆解为 M1/M2 编号任务，方向文档可直接交给 AI Agent 执行。",
+      "shot": "assets/line03-b.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "识别散落",
+        "desc": "会议建议口头说说就散，无状态、无跟踪、无编号。"
+       },
+       {
+        "step": "02",
+        "title": "统一模板",
+        "desc": "每个方向一档，会议原话带发言人与时间戳可回溯。"
+       },
+       {
+        "step": "03",
+        "title": "封装 Skill",
+        "desc": "有编号归类、无编号提炼、核查补录三种输入形态。"
+       },
+       {
+        "step": "04",
+        "title": "系列迭代",
+        "desc": "M1–M13 编号延续，README 状态与日志逐次更新。"
+       }
+      ]
+     }
+    ],
+    "metrics": [
+     {
+      "value": "13",
+      "label": "方向文档 M1–M13"
+     },
+     {
+      "value": "3",
+      "label": "会议归档（07-25 / 08-06 / 08-08）"
+     }
+    ],
+    "build": [
+     {
+      "step": "01",
+      "title": "沉淀复用",
+      "desc": "把群消息背后的原始材料留下来：三件套 + 讨论要点，不再是发完即弃。"
+     },
+     {
+      "step": "02",
+      "title": "归档规范",
+      "desc": "约定目录结构：日期目录 + 方向子目录 + README 索引，材料齐全才算闭环。"
+     },
+     {
+      "step": "03",
+      "title": "方向文档化",
+      "desc": "封装 meeting-to-execution-plan-docs：会议建议成为 M 系列执行计划，原话带时间戳可回溯。"
+     },
+     {
+      "step": "04",
+      "title": "状态追踪闭环",
+      "desc": "README 更新日志记录每次进展，跨会议交叉引用，新成员直接读归档接手。"
+     }
+    ]
+   }
+  },
+  {
+   "no": "04",
+   "title": "其他好用的 skill 推荐",
+   "theme": "从工具到工具箱：值得一试的四个技能",
+   "intro": "前三条线之外，还有四个日常高频使用的技能，按用途分两组：提示词优化与网页构建（prompt-enhancer、html-beautify），互联网调研与检索（agent-reach、anysearch）。本演示页就是 html-beautify 构建的。",
+   "skills": [
+    {
+     "name": "prompt-enhancer · 提示词优化",
+     "tagline": "把脑中不成熟、表达不清的想法，格式化拓展成 Agent 能规范执行的提示词。",
+     "purpose": "想表达的是一团模糊的想法，Agent 只能靠猜。这个技能对不成熟的提示词做格式化拓展与补充，让 Agent 更规范地执行；每份交付都附 What Changed 说明——用得越多，越清楚该怎么向 AI 叙述需求。",
+     "capabilities": [
+      "模糊想法格式化为结构提示词：角色、任务、动机、步骤、输出契约",
+      "三模式自动路由：第一性原理推导 / eval 驱动迭代 / 标准技巧工程",
+      "交付附 What Changed：间接教会用户如何向 AI 叙述需求"
+     ],
+     "links": [
+      {
+       "label": "getsentry/prompt-optimizer · eval 驱动模式来源",
+       "url": "https://github.com/getsentry/skills"
+      },
+      {
+       "label": "prompt-engineering-skill · 标准模式来源",
+       "url": "https://github.com/PhAlves23/prompt-engineering-skill"
+      }
+     ]
+    },
+    {
+     "name": "html-beautify · 网页美化与构建",
+     "tagline": "网页渲染优化与打磨的一站式技能；用得最多的是从零构建一个新网页。",
+     "purpose": "它整合多个上游设计技能与大量高级 HTML 素材库，既能做渲染优化与网页打磨，也能从零构建：把需求交给它，它先从素材库检索相似度最高的模板作为候选，再基于这些高级模板定制出适配本次需求的网页。本演示页就是这么来的。",
+     "capabilities": [
+      "match 流程：从 HTML 素材库检索相似度最高的模板作为候选",
+      "基于高级模板定制适配需求的网页，也支持从零设计",
+      "网页渲染优化与打磨；交付 DESIGN.md + finish review 验收"
+     ],
+     "links": [
+      {
+       "label": "Impeccable · 设计方向上游",
+       "url": "https://github.com/pbakaus/impeccable"
+      },
+      {
+       "label": "Emil Kowalski · 设计工程上游",
+       "url": "https://github.com/emilkowalski/skills"
+      },
+      {
+       "label": "Anthropic frontend-design · 上游",
+       "url": "https://github.com/anthropics/skills"
+      },
+      {
+       "label": "qiaomu-design · 58 站点 HTML 素材库",
+       "url": "https://github.com/joeseesun/qiaomu-design"
+      }
+     ]
+    },
+    {
+     "name": "agent-reach · 互联网能力路由器",
+     "tagline": "登录类平台资源的路由器：小红书、微博、B 站……一个入口覆盖 15 个平台。",
+     "purpose": "很多高质量信息只存在于需要登录的客户端里：小红书、微博、B 站……agent-reach 把这些平台统一成一张路由表，借助社交软件的推荐机制，能高效搜到感兴趣领域的知识——比如 AI 圈的最新动态。",
+     "capabilities": [
+      "覆盖登录类平台：小红书、微博、B 站等 15 个平台统一路由",
+      "借社交平台推荐机制，高效获取 AI 圈等领域的圈内消息",
+      "doctor 体检 + 失败重试链，多后端自动路由"
+     ],
+     "links": [
+      {
+       "label": "Agent-Reach · GitHub 仓库",
+       "url": "https://github.com/Panniantong/Agent-Reach"
+      }
+     ]
+    },
+    {
+     "name": "anysearch · 实时搜索引擎",
+     "tagline": "管「广度」的搭档：通用 + 垂直域实时搜索，与 agent-reach 的「深度」互为兜底。",
+     "purpose": "agent-reach 与 anysearch 是一对互补：前者是平台路由器——复用登录态进小红书/微博/B 站，读帖子、评论、视频字幕等深层内容；后者是搜索引擎——通用网页、垂直域（金融/学术/法律/安全）与结构化标识符（Stock/CVE/DOI/IATA），batch_search 批量并行、匿名免登录。一个管「找到有哪些东西」，一个管「把东西读出来」，互相兜住对方的盲区。",
+     "capabilities": [
+      "广度担当：通用网页 + 垂直域结构化（金融/学术/法律/安全）+ Stock/CVE/DOI/IATA 标识符",
+      "batch_search 一次并行 N 个查询、可混域；无需登录、匿名可用",
+      "与 agent-reach 互为 fallback：不可用时切换，中国网络下 agent-reach 内置 codeload/atom 绕行",
+      "标准协作流：anysearch 广谱侦察 → 定位深挖目标 → agent-reach 登录态读正文 → 汇总报告"
+     ],
+     "links": [
+      {
+       "label": "anysearch-skill · GitHub 仓库",
+       "url": "https://github.com/anysearch-ai/anysearch-skill"
+      }
+     ]
+    }
+   ],
+   "outcomes": {
+    "products": [
+     {
+      "name": "prompt-enhancer · 提示词优化",
+      "desc": "把不成熟的想法格式化拓展为规范提示词，三模式自动路由。",
+      "shot": "assets/line04-a.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "识别模糊",
+        "desc": "提示词太模糊 AI 只能靠猜，差在哪也不清楚。"
+       },
+       {
+        "step": "02",
+        "title": "三问定位",
+        "desc": "只问目标模型、输出类型、受众约束三个影响方向的问题。"
+       },
+       {
+        "step": "03",
+        "title": "封装 Skill",
+        "desc": "三模式自动路由 + 质检清单 + 统一交付格式。"
+       },
+       {
+        "step": "04",
+        "title": "交付迭代",
+        "desc": "What Changed 与假设说明随交付，持续修订优化。"
+       }
+      ]
+     },
+     {
+      "name": "html-beautify · 网页美化与构建",
+      "desc": "从素材库检索相似模板定制网页，渲染优化与打磨。",
+      "shot": "assets/line04-b.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "识别模板感",
+        "desc": "网页做出来像模板，是缺少设计方向而非缺组件。"
+       },
+       {
+        "step": "02",
+        "title": "四系统合成",
+        "desc": "设计方向先定，再落地色彩、排版、动效与中文规范。"
+       },
+       {
+        "step": "03",
+        "title": "封装 Skill",
+        "desc": "match 选参照或从零设计，DESIGN.md 记录 + finish review 验收。"
+       },
+       {
+        "step": "04",
+        "title": "产出迭代",
+        "desc": "本演示页即产出，7 套主题一键切换。"
+       }
+      ]
+     },
+     {
+      "name": "agent-reach · 互联网能力路由器",
+      "desc": "登录类社交平台资源路由器，借推荐机制获取圈内消息。",
+      "shot": "assets/line04-c.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "识别零散",
+        "desc": "调研信息散在十几个平台，每个平台各找各的办法。"
+       },
+       {
+        "step": "02",
+        "title": "路由表化",
+        "desc": "15 平台统一入口，动手前 doctor 体检确认后端可用。"
+       },
+       {
+        "step": "03",
+        "title": "封装 Skill",
+        "desc": "多后端路由 + 6 个零配置渠道 + 失败重试链。"
+       },
+       {
+        "step": "04",
+        "title": "打法迭代",
+        "desc": "搜索 + 社交平台看讨论 + 中文社区看场景，并行汇总。"
+       }
+      ]
+     },
+     {
+      "name": "anysearch · 实时搜索引擎",
+      "desc": "agent-reach 的搭档，补全垂直域检索短板。",
+      "shot": "assets/line04-d.webp",
+      "build": [
+       {
+        "step": "01",
+        "title": "识别不准",
+        "desc": "通用搜索对股票、CVE、DOI 等专业问题命中差。"
+       },
+       {
+        "step": "02",
+        "title": "垂直域优先",
+        "desc": "get_sub_domains 先发现子域与必填参数再检索。"
+       },
+       {
+        "step": "03",
+        "title": "封装 Skill",
+        "desc": "单 JSON-RPC 端点，跨平台 CLI 无需安装 MCP server。"
+       },
+       {
+        "step": "04",
+        "title": "并行迭代",
+        "desc": "batch_search 一个通用 + N 个垂直域，HYBRID 打法。"
+       }
+      ]
+     }
+    ],
+    "metrics": [
+     {
+      "value": "15",
+      "label": "agent-reach 覆盖平台"
+     },
+     {
+      "value": "16+",
+      "label": "anysearch 垂直域"
+     }
+    ],
+    "build": [
+     {
+      "step": "01",
+      "title": "检索现状",
+      "desc": "遇到高频需求先搜现成技能：网页设计、提示词优化、平台调研各有成熟方案。"
+     },
+     {
+      "step": "02",
+      "title": "试用评估",
+      "desc": "小任务试用，评估是否值得收编：输出质量、稳定性、维护成本。"
+     },
+     {
+      "step": "03",
+      "title": "组合进工作流",
+      "desc": "按用途编组：内容创作组与检索调研组互相配合——调研、素材、网页构建一条链。"
+     },
+     {
+      "step": "04",
+      "title": "蒸馏沉淀",
+      "desc": "高频用法蒸馏为项目级技能，如本项目的 html-lecture-deck 与 meeting-to-wechat。"
+     }
+    ]
+   }
+  }
+ ],
+ "closing": {
+  "heading": "四条线，汇于一处",
+  "text": "个人科研中的 AI 能力，经由团队协作被放大；团队协作的公共工具，反过来滋养每个人的研究。从接力棒到知识图谱、从会议纪要到 M 系列文档——过程性信息沉淀为可复用的数据资产，全部有可打开的真实文件佐证。如果这套实践与贵司的业务场景有交汇之处，期待进一步沟通。",
+  "cta_primary": "进一步沟通",
+  "cta_secondary": "回到技能全景",
+  "foot_note": "本页由 html-beautify 设计系统构建 · 内容为真实技能实践记录"
+ }
+}

@@ -1,0 +1,103 @@
+﻿{
+    "version":  "1.0.0",
+    "last_check":  "2026-08-16T10:51:05.9368792+08:00",
+    "upstreams":  {
+                      "pbakaus/impeccable":  {
+                                                 "repo":  "https://github.com/pbakaus/impeccable",
+                                                 "skill_path":  ".claude/skills/impeccable",
+                                                 "last_merged_sha":  "7b646bafd60b9dd9828ce5c4c1a25691702c9e92",
+                                                 "merged_files":  [
+                                                                      "SKILL.md",
+                                                                      "reference/",
+                                                                      "scripts/"
+                                                                  ],
+                                                 "mapped_to":  {
+                                                                   "SKILL.md":  "Fused into html-beautify SKILL.md (commands table, principles, routing) — manual merge",
+                                                                   "reference/":  "reference/ (direct copy, except locally patched files)",
+                                                                   "scripts/":  "scripts/ (direct copy, except locally patched files)"
+                                                               },
+                                                 "patched_files":  [
+                                                                       "reference/critique.md",
+                                                                       "reference/doctor.md",
+                                                                       "reference/hooks.md",
+                                                                       "reference/degraded/asset-producer.md",
+                                                                       "scripts/hook-admin.mjs",
+                                                                       "scripts/hook-lib.mjs",
+                                                                       "scripts/context.mjs",
+                                                                       "scripts/context-signals.mjs",
+                                                                       "scripts/serve-question.mjs",
+                                                                       "scripts/live-server.mjs",
+                                                                       "scripts/live-inject.mjs",
+                                                                       "scripts/live-browser.js",
+                                                                       "scripts/live.mjs",
+                                                                       "scripts/live/roots.mjs",
+                                                                       "scripts/live/svelte-component.mjs",
+                                                                       "scripts/live/frameworks/journal.mjs",
+                                                                       "scripts/live/source-search.mjs",
+                                                                       "scripts/live/manual-edits-buffer.mjs",
+                                                                       "scripts/live/frameworks/tag-strategy.mjs",
+                                                                       "scripts/live-discard-manual-edits.mjs",
+                                                                       "scripts/live-commit-manual-edits.mjs",
+                                                                       "scripts/lib/staleness.mjs",
+                                                                       "scripts/lib/staleness-deep.mjs",
+                                                                       "scripts/detector/cli/main.mjs"
+                                                                   ],
+                                                 "patch_rule":  "All listed patched_files had \u0027skills/impeccable\u0027 rewritten to \u0027skills/html-beautify\u0027 (skill paths in hook manifests, probes, and references). AutoMerge must skip any file containing \u0027skills/html-beautify\u0027 in its local copy; after an upstream update, re-apply the same sed replacement to the merged files, then record the new SHA."
+                                             },
+                      "emilkowalski/skills":  {
+                                                  "repo":  "https://github.com/emilkowalski/skills",
+                                                  "skill_path":  "skills",
+                                                  "last_merged_sha":  "e48aeea9b5e4fe682f8e83b82440e3d43a9a6278",
+                                                  "merged_files":  [
+                                                                       "skills/*/SKILL.md",
+                                                                       "skills/*/API.md",
+                                                                       "skills/*/STANDARDS.md",
+                                                                       "skills/*/AUDIT.md",
+                                                                       "skills/*/PLAN-TEMPLATE.md",
+                                                                       "skills/*/PICKER.md",
+                                                                       "skills/*/RECIPES.md"
+                                                                   ],
+                                                  "mapped_to":  {
+                                                                    "skills/":  "reference/emil/ (direct copy — no local patches)"
+                                                                },
+                                                  "patched_files":  [
+
+                                                                    ],
+                                                  "patch_rule":  "Direct copy. No local modifications to emilkowalski files; AutoMerge is safe for the whole subtree."
+                                              },
+                      "anthropics/skills":  {
+                                               "repo":  "https://github.com/anthropics/skills",
+                                               "skill_path":  "skills/frontend-design",
+                                               "last_merged_sha":  "f6656c1256d5a8adfa37db9110046ef20bac644c",
+                                               "merged_files":  [
+                                                                    "SKILL.md",
+                                                                    "LICENSE.txt"
+                                                                ],
+                                               "dest_map":  {
+                                                                "SKILL.md":  "reference/frontend-design.md",
+                                                                "LICENSE.txt":  "reference/frontend-design.LICENSE.txt"
+                                                            },
+                                               "patched_files":  [
+
+                                                                  ],
+                                               "patch_rule":  "Direct copy via dest_map (file-level rename). No local patches."
+                                           },
+                      "joeseesun/qiaomu-design":  {
+                                                        "repo":  "https://github.com/joeseesun/qiaomu-design",
+                                                        "skill_path":  "",
+                                                        "last_merged_sha":  "39dac8238a6ba44a4e39c1f0f6ca641224b01879",
+                                                        "merged_files":  [
+                                                                             "SKILL.md",
+                                                                             "references/"
+                                                                         ],
+                                                        "dest_map":  {
+                                                                         "SKILL.md":  "reference/qiaomu/SKILL.md",
+                                                                         "references":  "reference/qiaomu/references"
+                                                                     },
+                                                        "patched_files":  [
+
+                                                                          ],
+                                                        "patch_rule":  "Direct copy via dest_map (directory-level). docs/ (case images) is intentionally excluded to keep the skill lean."
+                                                    }
+                  }
+}

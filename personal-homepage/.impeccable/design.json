@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-19T12:00:00.000Z",
+  "title": "Design System: 学术个人主页模板（Academic Personal Homepage）",
+  "extensions": {
+    "colorMeta": {
+      "crimson": {
+        "role": "primary",
+        "displayName": "人大红 RUC Crimson",
+        "canonical": "#971f30",
+        "tonalRamp": ["oklch(15% 0.05 20)", "oklch(22% 0.09 20)", "oklch(30% 0.13 20)", "oklch(41% 0.17 20)", "oklch(52% 0.15 20)", "oklch(65% 0.11 20)", "oklch(80% 0.06 20)", "oklch(94% 0.02 20)"]
+      },
+      "crimson-deep": {
+        "role": "primary",
+        "displayName": "沉红 Deep Crimson",
+        "canonical": "#7c1524",
+        "tonalRamp": ["oklch(12% 0.04 18)", "oklch(18% 0.08 18)", "oklch(24% 0.12 18)", "oklch(31% 0.16 18)", "oklch(45% 0.14 18)", "oklch(60% 0.10 18)", "oklch(76% 0.05 18)", "oklch(92% 0.02 18)"]
+      },
+      "ivory": {
+        "role": "primary",
+        "displayName": "米白 Ivory",
+        "canonical": "#fff8f4",
+        "tonalRamp": ["oklch(15% 0.005 55)", "oklch(25% 0.006 55)", "oklch(38% 0.006 55)", "oklch(52% 0.006 55)", "oklch(68% 0.006 55)", "oklch(82% 0.005 55)", "oklch(92% 0.004 55)", "oklch(98% 0.003 55)"]
+      },
+      "antique-gold": {
+        "role": "secondary",
+        "displayName": "旧金 Antique Gold",
+        "canonical": "#8a6d3b",
+        "tonalRamp": ["oklch(15% 0.04 75)", "oklch(24% 0.06 75)", "oklch(35% 0.08 75)", "oklch(48% 0.10 75)", "oklch(60% 0.09 75)", "oklch(72% 0.07 75)", "oklch(85% 0.04 75)", "oklch(95% 0.02 75)"]
+      },
+      "brick-rose": {
+        "role": "secondary",
+        "displayName": "砖玫瑰 Brick Rose",
+        "canonical": "#b03040",
+        "tonalRamp": ["oklch(15% 0.06 15)", "oklch(24% 0.10 15)", "oklch(35% 0.14 15)", "oklch(47% 0.16 15)", "oklch(58% 0.14 15)", "oklch(70% 0.10 15)", "oklch(83% 0.05 15)", "oklch(94% 0.02 15)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "纸面 Paper",
+        "canonical": "#f8f7f5",
+        "tonalRamp": ["oklch(15% 0.004 85)", "oklch(25% 0.005 85)", "oklch(38% 0.005 85)", "oklch(52% 0.005 85)", "oklch(68% 0.005 85)", "oklch(82% 0.005 85)", "oklch(91% 0.004 85)", "oklch(97% 0.003 85)"]
+      },
+      "paper-dim": {
+        "role": "neutral",
+        "displayName": "纸面灰 Paper Dim",
+        "canonical": "#f2f0ed",
+        "tonalRamp": ["oklch(15% 0.004 80)", "oklch(25% 0.005 80)", "oklch(38% 0.005 80)", "oklch(52% 0.005 80)", "oklch(68% 0.005 80)", "oklch(82% 0.005 80)", "oklch(90% 0.004 80)", "oklch(96% 0.003 80)"]
+      },
+      "card-paper": {
+        "role": "neutral",
+        "displayName": "卡片纸 Card Paper",
+        "canonical": "#ece9e5",
+        "tonalRamp": ["oklch(15% 0.004 75)", "oklch(25% 0.005 75)", "oklch(38% 0.005 75)", "oklch(52% 0.005 75)", "oklch(68% 0.005 75)", "oklch(82% 0.005 75)", "oklch(89% 0.004 75)", "oklch(95% 0.003 75)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "墨 Ink",
+        "canonical": "#2a1d1a",
+        "tonalRamp": ["oklch(12% 0.01 35)", "oklch(17% 0.015 35)", "oklch(23% 0.02 35)", "oklch(32% 0.02 35)", "oklch(45% 0.018 35)", "oklch(60% 0.014 35)", "oklch(76% 0.008 35)", "oklch(92% 0.004 35)"]
+      },
+      "ink-border": {
+        "role": "neutral",
+        "displayName": "墨色 Tint Ink Border",
+        "canonical": "rgba(90,30,35,.14)",
+        "tonalRamp": ["oklch(15% 0.04 355)", "oklch(24% 0.06 355)", "oklch(35% 0.08 355)", "oklch(48% 0.09 355)", "oklch(60% 0.07 355)", "oklch(72% 0.05 355)", "oklch(85% 0.03 355)", "oklch(95% 0.01 355)"]
+      },
+      "chip-ink": {
+        "role": "neutral",
+        "displayName": "暖褐 Chip Ink",
+        "canonical": "#7a5644",
+        "tonalRamp": ["oklch(15% 0.03 50)", "oklch(24% 0.05 50)", "oklch(35% 0.06 50)", "oklch(48% 0.06 50)", "oklch(60% 0.05 50)", "oklch(72% 0.04 50)", "oklch(85% 0.02 50)", "oklch(95% 0.01 50)"]
+      },
+      "code-paper": {
+        "role": "neutral",
+        "displayName": "代码纸 Code Paper",
+        "canonical": "#f0ede7",
+        "tonalRamp": ["oklch(15% 0.004 70)", "oklch(25% 0.005 70)", "oklch(38% 0.005 70)", "oklch(52% 0.005 70)", "oklch(68% 0.005 70)", "oklch(82% 0.005 70)", "oklch(89% 0.004 70)", "oklch(95% 0.003 70)"]
+      },
+      "hero-grad-top": {
+        "role": "neutral",
+        "displayName": "Hero 渐变顶端",
+        "canonical": "#f9f4ec",
+        "tonalRamp": ["oklch(15% 0.006 60)", "oklch(25% 0.008 60)", "oklch(38% 0.01 60)", "oklch(52% 0.01 60)", "oklch(68% 0.008 60)", "oklch(82% 0.006 60)", "oklch(91% 0.004 60)", "oklch(97% 0.003 60)"]
+      },
+      "hero-grad-mid": {
+        "role": "neutral",
+        "displayName": "Hero 渐变中点",
+        "canonical": "#f1e7da",
+        "tonalRamp": ["oklch(15% 0.012 65)", "oklch(25% 0.016 65)", "oklch(38% 0.02 65)", "oklch(52% 0.02 65)", "oklch(68% 0.016 65)", "oklch(82% 0.012 65)", "oklch(91% 0.008 65)", "oklch(97% 0.004 65)"]
+      },
+      "hero-grad-bottom": {
+        "role": "neutral",
+        "displayName": "Hero 渐变底端",
+        "canonical": "#f8f5f1",
+        "tonalRamp": ["oklch(15% 0.004 75)", "oklch(25% 0.005 75)", "oklch(38% 0.005 75)", "oklch(52% 0.005 75)", "oklch(68% 0.005 75)", "oklch(82% 0.005 75)", "oklch(91% 0.004 75)", "oklch(97% 0.003 75)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero 姓名，仅此一处（46px/700，560px 降 34px，文学主题降 400）。" },
+      "headline": { "displayName": "Headline", "purpose": "版块标题 h2（24px/700），右缀英文副题。" },
+      "title": { "displayName": "Title", "purpose": "卡片 h3（16.5px/700，衬线显示体）。" },
+      "body": { "displayName": "Body", "purpose": "正文（15px/1.75），卡片段落 14–14.5px/1.8。" },
+      "label": { "displayName": "Label / Mono", "purpose": "时间线时间、年份、卷期、BibTeX 等数字与标注。" }
+    },
+    "shadows": [
+      { "name": "float", "value": "0 10px 14px -6px rgba(90,30,35,.16), 0 2px 6px -2px rgba(90,30,35,.1)", "purpose": "浮层用：主题切换按钮/面板、照片卡。blur ≤14px。" },
+      { "name": "card", "value": "0 1px 2px rgba(90,30,35,.05), 0 3px 10px -3px rgba(90,30,35,.12)", "purpose": "卡片/成员卡静息投影，极淡环境光。" },
+      { "name": "swatch-ring", "value": "inset 0 0 0 1px rgba(0,0,0,.12)", "purpose": "主题面板色板点 .ts-dot 的内圈描边，跨主题恒定的唯一硬编码阴影。" }
+    ],
+    "motion": [
+      { "name": "transition-fast", "value": ".15s ease", "purpose": "文字/边框/背景的状态切换（hover/active/选中）。" },
+      { "name": "transition-bg", "value": ".2s ease", "purpose": "body 主题切换时的底色/文字色过渡。" },
+      { "name": "transition-panel", "value": ".18s ease-out", "purpose": "主题面板开合（opacity/transform/visibility）。" },
+      { "name": "transition-toc", "value": ".22s ease-out", "purpose": "左侧目录折叠/展开（transform）。" },
+      { "name": "hero-rise", "value": ".38s ease-out forwards (heroRise)", "purpose": "首屏 .hero .enter 入场（translateY 10px → 0），.d1 延迟 .07s。" },
+      { "name": "skeleton-pulse", "value": "1.6s ease-in-out infinite alternate (skelPulse)", "purpose": "骨架屏透明度呼吸。" },
+      { "name": "reduced-motion", "value": "transition-duration:.01ms (prefers-reduced-motion)", "purpose": "用户偏好减弱动效时，所有过渡与动画归零。" }
+    ],
+    "breakpoints": [
+      { "name": "toc", "value": "1360px" },
+      { "name": "tablet", "value": "900px" },
+      { "name": "mobile", "value": "560px" },
+      { "name": "container", "value": "1120px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "中性纸面容器，研究/项目/联系等版块的内容承载面。",
+      "html": "<div class='ds-card'><h3>研究方向</h3><p>研究稀疏模型下估计与检验的极小极大最优速率。</p></div>",
+      "css": ".ds-card{background:var(--bg-2,#ece9e5);border:1px solid var(--border-soft,rgba(90,30,35,.08));border-radius:12px;padding:22px 24px;box-shadow:var(--shadow-card,0 1px 2px rgba(90,30,35,.05),0 3px 10px -3px rgba(90,30,35,.12));color:var(--text-hi,#2a1d1a);font-family:var(--font-sans,'PingFang SC',sans-serif)}.ds-card h3{font-family:var(--font-display,Georgia,serif);font-size:16.5px;font-weight:700;margin:0 0 10px}.ds-card p{color:var(--text-mid,rgba(42,29,26,.76));font-size:14.5px;line-height:1.8;margin:0}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "研究兴趣标签，中性纸墨胶囊，非 accent。",
+      "html": "<span class='ds-chip'>高维统计推断</span>",
+      "css": ".ds-chip{display:inline-flex;align-items:center;padding:5px 14px;border-radius:999px;background:var(--chip-bg,rgba(90,30,35,.05));color:var(--chip-ink,#7a5644);font-size:13px;border:1px solid var(--border-soft,rgba(90,30,35,.08));transition:border-color .15s ease;font-family:var(--font-sans,'PingFang SC',sans-serif)}.ds-chip:hover{border-color:var(--border-strong,rgba(90,30,35,.3))}"
+    },
+    {
+      "name": "Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "人才称号徽章，页面仅有的 accent 实底强调物。",
+      "html": "<span class='ds-badge'>国家优秀青年科学基金获得者</span>",
+      "css": ".ds-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:var(--badge-bg,#971f30);color:var(--badge-ink,#fff8f4);font-size:12.5px;font-weight:500;font-family:var(--font-sans,'PingFang SC',sans-serif)}.ds-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.65}"
+    },
+    {
+      "name": "Social Pill",
+      "kind": "button",
+      "refersTo": "soc-pill",
+      "description": "Scholar/ORCID/GitHub 等社交链接，空心胶囊。",
+      "html": "<a class='ds-soc' href='#'>Scholar</a>",
+      "css": ".ds-soc{display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border-radius:999px;border:1px solid var(--border,rgba(90,30,35,.14));color:var(--text-mid,rgba(42,29,26,.76));font-size:13px;text-decoration:none;transition:border-color .15s ease,color .15s ease,background-color .15s ease;font-family:var(--font-sans,'PingFang SC',sans-serif)}.ds-soc:hover{color:var(--accent,#971f30);border-color:var(--accent-dim,rgba(151,31,48,.38));background:var(--accent-soft,rgba(151,31,48,.1))}"
+    },
+    {
+      "name": "Paper Button",
+      "kind": "button",
+      "refersTo": null,
+      "description": "论文 PDF/代码/DOI 等小按钮，空心描边 + hover 填充 tint。",
+      "html": "<a class='ds-pbtn' href='#'>PDF</a>",
+      "css": ".ds-pbtn{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:3px 10px;border:1px solid var(--border,rgba(90,30,35,.14));border-radius:6px;color:var(--text-mid,rgba(42,29,26,.76));text-decoration:none;transition:color .15s ease,border-color .15s ease,background-color .15s ease;font-family:var(--font-sans,'PingFang SC',sans-serif)}.ds-pbtn:hover{color:var(--accent,#971f30);border-color:var(--accent-dim,rgba(151,31,48,.38));background:var(--accent-soft,rgba(151,31,48,.1))}"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "顶栏锚点导航，active 态 accent 字 + 底部 2px 下划线。",
+      "html": "<a class='ds-nav-link' href='#'>研究</a>",
+      "css": ".ds-nav-link{position:relative;padding:8px 12px;font-size:14px;color:var(--accent,#971f30);font-weight:600;border-radius:8px;text-decoration:none;font-family:var(--font-sans,'PingFang SC',sans-serif)}.ds-nav-link::after{content:'';position:absolute;left:12px;right:12px;bottom:2px;height:2px;border-radius:1px;background:var(--accent,#971f30)}.ds-nav-link:hover{background:var(--surface-1,rgba(151,31,48,.04))}"
+    },
+    {
+      "name": "TOC Item",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "左侧目录项，active 态 accent 字 + accent 圆点。",
+      "html": "<a class='ds-toc-item' href='#'><i class='ds-toc-dot'></i>研究方向</a>",
+      "css": ".ds-toc-item{display:flex;align-items:center;gap:9px;padding:7px 12px;border-radius:8px;color:var(--text-mid,rgba(42,29,26,.76));font-size:13.5px;text-decoration:none;font-family:var(--font-sans,'PingFang SC',sans-serif);transition:color .15s ease,background-color .15s ease}.ds-toc-item .ds-toc-dot{width:6px;height:6px;border-radius:50%;background:var(--accent,#971f30);flex-shrink:0}.ds-toc-item.active,.ds-toc-item:hover{color:var(--accent,#971f30);font-weight:600;background:var(--surface-1,rgba(151,31,48,.04))}"
+    },
+    {
+      "name": "Theme Switcher Button",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "右下角固定主题切换方块，唤起主题面板。",
+      "html": "<button class='ds-ts-btn' type='button' aria-label='切换主题风格'><svg viewBox='0 0 24 24' width='22' height='22' fill='none' aria-hidden='true'><circle cx='8.5' cy='12' r='4.6' fill='currentColor' opacity='.4'/><circle cx='15.5' cy='8.5' r='4.2' fill='currentColor' opacity='.28'/><circle cx='15' cy='15.5' r='5' fill='currentColor' opacity='.5'/></svg></button>",
+      "css": ".ds-ts-btn{width:46px;height:46px;border-radius:12px;background:var(--bg-2,#ece9e5);border:1px solid var(--border-strong,rgba(90,30,35,.3));box-shadow:var(--shadow-float,0 10px 14px -6px rgba(90,30,35,.16),0 2px 6px -2px rgba(90,30,35,.1));display:grid;place-items:center;color:var(--accent,#971f30);cursor:pointer;transition:transform .15s ease}.ds-ts-btn:hover{transform:translateY(-2px)}.ds-ts-btn:active{transform:scale(.95)}"
+    },
+    {
+      "name": "Recruit Callout",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "团队节招生文案卡，accent tint 作整块容器的唯一实例。",
+      "html": "<div class='ds-recruit'><h3>招生信息</h3><p>欢迎对统计理论与机器学习感兴趣的同学联系我。</p></div>",
+      "css": ".ds-recruit{background:var(--accent-soft,rgba(151,31,48,.1));border:1px solid var(--accent-dim,rgba(151,31,48,.38));border-radius:12px;padding:20px 24px;font-family:var(--font-sans,'PingFang SC',sans-serif)}.ds-recruit h3{font-size:16px;font-weight:700;color:var(--accent-strong,#7c1524);margin:0 0 8px;font-family:var(--font-display,Georgia,serif)}.ds-recruit p{font-size:14px;color:var(--text-mid,rgba(42,29,26,.76));line-height:1.8;margin:0}"
+    },
+    {
+      "name": "Skeleton",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "骨架占位块，等待嵌入大图加载。",
+      "html": "<div class='ds-skel' style='min-height:120px'></div>",
+      "css": ".ds-skel{position:relative;overflow:hidden;background:var(--surface-2,rgba(151,31,48,.07));border-radius:8px;animation:ds-skelPulse 1.6s ease-in-out infinite alternate}@keyframes ds-skelPulse{from{opacity:.55}to{opacity:1}}@media(prefers-reduced-motion:reduce){.ds-skel{animation:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Discipline Is the Frame",
+    "overview": "同一套内容骨架——关于我/研究方向/学术论文/科研项目/教学/荣誉奖励/学术报告/团队/联系九节——被 34 套主题反复装裱。每套主题的身份不靠换色成立，而靠学科的参照物在场：数学的尺规与方格纸、法学的天平与条文、统计学的正态曲线、文学的竹简与朱砂印、物理的原子轨道、经济学的供需曲线、金融学的 K 线烛图。访客 30 秒内知道「这是谁、做什么方向、怎么联系」，30 秒后记住所在学科的视觉母题。\n\n视觉实现是「token 化基座 + 主题块」的严格分层。基座 CSS（#base-css）全部颜色走 var()，主题只是 37 个 token 的 :root 覆盖层加几条 body[data-theme] 专属规则，切换时整块替换 <style id=\"theme-css\">。因此「换肤」不触碰任何结构、组件或排版，只换 token、装饰符号与底层纹样三样东西。默认打开主题是人大红浅色（ruc-light），其校徽红 #971f30 是中国人民大学官方视觉识别体系的锚色。\n\n装饰系统分四层：整页右下角学科主图水印 .page-orn（#main-* 符号，低透明）、版块标题右侧的学科纹样 .sec-orn（#orn-* 符号）、版块内容角落的小点缀 .mini-orn（按 data-slot 奇偶轮换两枚符号）、以及人大红主题专属的官方校徽背景层（.hero-emblem 左下主图 + .sec-orn-vi 版块校徽 + body::after 整页校徽纹样）。所有装饰符号都是 stroke=\"currentColor\" 的单色线条风，随主题 --decor-ink 换色。字体走系统栈，无 webfont、零外部依赖。深度是「扁平分层」：靠 --bg-0/1/2 三级纸面与两档软阴影建立层次，不出现硬偏移投影。",
+    "keyCharacteristics": [
+      "37-token 设计令牌基座 + 34 套主题块；基座 CSS 一律 var()，硬编码颜色会使换肤失效。",
+      "学科气质靠参照物（装饰符号 + 底层纹样）传达，不靠换色；每套主题 3 枚色板（accent / 页面底 / 卡片底）。",
+      "66 个单色线条 SVG 符号（16 main-* 学科主图 + 16 orn-* 学科纹样 + 32 mini-*-a/b 点缀 + 2 个 ruc 空壳），currentColor 随主题变色。",
+      "默认主题为人大红浅色（校徽红 #971f30），系统栈字体、零 webfont、零运行时依赖。",
+      "中英双语 data-zh/data-en 双 span + html[data-lang] 显隐；主题/语言/目录折叠状态均记入 localStorage。"
+    ],
+    "rules": [
+      { "name": "The Three-Swatch Rule", "body": "每套主题由恰好 3 枚色板定义并呈现在切换面板：[accent, 页面底, 卡片底]。色板是主题的速写，比 37 个 token 浓缩，是用户对主题的第一眼感知。", "section": "colors" },
+      { "name": "The Var-Only Rule", "body": "基座 CSS 的任何颜色都必须走 var()；硬编码颜色会在换肤时失效。新增组件只能引用语义槽，不得写死 hex。基座里唯一例外是 .ts-dot 的 rgba(0,0,0,.12) 内圈描边阴影——它是跨主题恒定的「色板描边」，记录在 sidecar 阴影档。", "section": "colors" },
+      { "name": "The Accent-On-Composite Rule", "body": "accent 文字在 --bg-2 与 --accent-soft 合成面上必须 ≥4.5:1（亮色主题）；暗色主题正文 ≥7:1、accent 合成面 ≥4.5:1。小号 accent 文字（年份、时间线时间）最容易踩线，先算后改。", "section": "colors" },
+      { "name": "The Reserved-Slot Rule", "body": "--accent-2、--surface-2、--btn-bg、--btn-ink、--btn-hover 五个槽位在 34 套主题中已定义，但当前基座尚无组件消费。它们是主题契约的保留槽，不是缺陷，也不该据此虚构一个不存在的实底主按钮。", "section": "colors" },
+      { "name": "The No-Wefont Rule", "body": "不引任何网络字体与 CDN；全部回退系统字体栈（中文 PingFang/微软雅黑，衬线 Georgia/Songti，楷体 KaiTi/STKaiti）。新增主题不得引入 webfont。", "section": "typography" },
+      { "name": "The 0.04em Rule", "body": "中文字距 ≤0.04em。基座里 letter-spacing 收敛在 0.01–0.03em；超过 0.04em 是检测红线。", "section": "typography" },
+      { "name": "The Fixed-Ramp Rule", "body": "字号只取 20 级步进（11 / 11.5 / 12 / 12.5 / 13 / 13.5 / 14 / 14.5 / 15 / 15.5 / 16 / 16.5 / 17 / 18 / 19 / 22 / 24 / 26 / 34 / 46 px），新增文案不得夹带中间值。", "section": "typography" },
+      { "name": "The Blur-Cap Rule", "body": "阴影 blur ≤14px（「细边框 + 宽阴影」是检测项）；阴影色一律走主题的墨色 tint（rgba(90,30,35,…) 低透明），暗色主题 tint 收敛为黑。新增投影不得放大模糊半径或引入实色偏移。", "section": "elevation" },
+      { "name": "The Pill-Is-Identity Rule", "body": "胶囊（999px）只用于个人身份物（徽章、chips、社交、头像）；内容容器（卡片、面板）用 12–14px 直角圆角。二者不可混用。", "section": "shapes" }
+    ],
+    "dos": [
+      "Do 用语义 token 槽（--accent、--bg-2、--text-hi…）写任何基座颜色，新增组件只引用槽位，不写死 hex。",
+      "Do 给每套新主题写全 37 个 token 槽位（TOKEN_ORDER 顺序）并指定 decor 与 _font；缺项会使 buildCss 漏写变量。",
+      "Do 新增学科装饰用 96×96 viewBox、stroke=\"currentColor\" 单色线条 <symbol id=\"orn-*\">，随主题换色。",
+      "Do 让小号 accent 文字（年份、时间线时间）先验证 --bg-2 上 ≥4.5:1 对比度，再落值。",
+      "Do 阴影 blur 保持 ≤14px，色值走墨色 tint；分隔用 · 或 en-dash（–），正文避免 em-dash（—）。",
+      "Do 双语文案成对书写 data-zh/data-en，由 html[data-lang] 统一显隐。",
+      "Do 圆角只取九档步进（1/2/4/5/6/8/12/14/999），字号只取 20 级步进。"
+    ],
+    "donts": [
+      "Don't 用「换色即换主题」——学科气质靠参照物（装饰符号 + 底层纹样）在场，不靠只改 accent。",
+      "Don't 在基座 CSS 里写硬编码颜色或引入 webfont/CDN 字体；两者都会破坏换肤与大陆可达性。",
+      "Don't 引入硬偏移投影（实色 4px/8px 偏移）或放大阴影模糊超过 14px。",
+      "Don't 把胶囊圆角（999px）用到内容容器上；容器用 12–14px，胶囊专属身份物。",
+      "Don't 因 --btn-bg/--btn-ink/--btn-hover 槽位存在而虚构一个实底主按钮——当前基座没有该组件，按钮一律空心描边。",
+      "Don't 手改 style_previews/*.html 或 theme-pack.js 之外的主题数据；预览变体是生成产物，重跑会被覆盖。"
+    ]
+  }
+}
