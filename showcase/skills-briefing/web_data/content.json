@@ -89,7 +89,8 @@
      "links": [
       {
        "label": "baton · GitHub 仓库",
-       "url": "https://github.com/blader/baton"
+       "url": "https://github.com/blader/baton",
+       "label_en": "baton · GitHub repo"
       }
      ]
     }

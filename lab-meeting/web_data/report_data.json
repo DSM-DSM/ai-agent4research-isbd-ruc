@@ -14,7 +14,10 @@
     "name": "示例项目（占位：替换为你的项目名）",
     "repo": "https://github.com/example/project",
     "description": "占位：一句话描述你的项目（如：在 XX 基准上通过 XX 方法提升 XX 指标）",
-    "core_idea": "占位：核心思想一句话"
+    "core_idea": "占位：核心思想一句话",
+    "name_en": "Example Project (placeholder: replace with your project name)",
+    "description_en": "Placeholder: one-line project description (e.g., improving XX on the XX benchmark via XX)",
+    "core_idea_en": "Placeholder: core idea in one sentence"
   },
   "baseline": {
     "original": {
@@ -37,8 +40,8 @@
     {
       "name": "方法 1（示例）",
       "name_en": "Method 1 (example)",
-    "group": "方向一 · 模块改进（示例分组）",
-    "group_en": "Direction 1 · Module Improvement (example group)",
+      "group": "方向一 · 模块改进（示例分组）",
+      "group_en": "Direction 1 · Module Improvement (example group)",
       "status": "completed",
       "best_result": {
         "test_auroc_macro_agg0": 0.812,
@@ -50,19 +53,43 @@
         "notes_en": "Placeholder: notes (e.g. best-config description)"
       },
       "runs": [
-        {"run_name": "run__method1_a", "method": "method1", "weight": 0.1, "test_auroc_macro_agg0": 0.8108, "test_auroc_macro_agg1": 0.8208, "date": "2026-07-11", "subtype": "variant_a", "notes": "占位"},
-        {"run_name": "run__method1_b", "method": "method1", "weight": 10, "test_auroc_macro_agg0": 0.812, "test_auroc_macro_agg1": 0.822, "date": "2026-07-12", "subtype": "variant_b", "notes": "占位"}
+        {
+          "run_name": "run__method1_a",
+          "method": "method1",
+          "weight": 0.1,
+          "test_auroc_macro_agg0": 0.8108,
+          "test_auroc_macro_agg1": 0.8208,
+          "date": "2026-07-11",
+          "subtype": "variant_a",
+          "notes": "占位",
+          "notes_en": "placeholder"
+        },
+        {
+          "run_name": "run__method1_b",
+          "method": "method1",
+          "weight": 10,
+          "test_auroc_macro_agg0": 0.812,
+          "test_auroc_macro_agg1": 0.822,
+          "date": "2026-07-12",
+          "subtype": "variant_b",
+          "notes": "占位",
+          "notes_en": "placeholder"
+        }
       ],
       "subgroups": {
         "variant_a": {
-          "runs": ["run__method1_a"],
+          "runs": [
+            "run__method1_a"
+          ],
           "best_vr": 0.02,
           "best_vr_weight": 5,
           "best_agg0": 0.8108,
           "best_agg0_weight": 0.1
         },
         "variant_b": {
-          "runs": ["run__method1_b"],
+          "runs": [
+            "run__method1_b"
+          ],
           "best_vr": 0.05,
           "best_vr_weight": 10,
           "best_agg0": 0.812,
@@ -73,8 +100,8 @@
     {
       "name": "方法 2（示例）",
       "name_en": "Method 2 (example)",
-    "group": "方向一 · 模块改进（示例分组）",
-    "group_en": "Direction 1 · Module Improvement (example group)",
+      "group": "方向一 · 模块改进（示例分组）",
+      "group_en": "Direction 1 · Module Improvement (example group)",
       "status": "completed",
       "best_result": {
         "test_auroc_macro_agg0": 0.811,
@@ -89,8 +116,8 @@
     {
       "name": "方法 3（示例）",
       "name_en": "Method 3 (example)",
-    "group": "方向二 · 新机制（示例分组）",
-    "group_en": "Direction 2 · New Mechanism (example group)",
+      "group": "方向二 · 新机制（示例分组）",
+      "group_en": "Direction 2 · New Mechanism (example group)",
       "status": "pending",
       "best_result": null,
       "runs": [],
@@ -125,8 +152,14 @@
         "Placeholder: next-week plan 1",
         "Placeholder: next-week plan 2"
       ],
-      "key_metrics": {"占位指标名": 0.8, "占位指标名 2": "占位"},
-      "key_metrics_en": {"Placeholder metric name": 0.8, "Placeholder metric name 2": "placeholder"}
+      "key_metrics": {
+        "placeholder metric 2": "placeholder",
+        "placeholder metric": 0.8
+      },
+      "key_metrics_en": {
+        "Placeholder metric name": 0.8,
+        "Placeholder metric name 2": "placeholder"
+      }
     },
     {
       "week_start": "2026-08-02",
@@ -195,16 +228,40 @@
       "category": "🔴 紧急",
       "category_en": "🔴 Urgent",
       "items": [
-        {"text": "占位：紧急待办 1", "text_en": "Placeholder: urgent todo 1", "done": false, "urgent": true, "in_progress": true},
-        {"text": "占位：紧急待办 2", "text_en": "Placeholder: urgent todo 2", "done": false, "urgent": false, "in_progress": false}
+        {
+          "text": "占位：紧急待办 1",
+          "text_en": "Placeholder: urgent todo 1",
+          "done": false,
+          "urgent": true,
+          "in_progress": true
+        },
+        {
+          "text": "占位：紧急待办 2",
+          "text_en": "Placeholder: urgent todo 2",
+          "done": false,
+          "urgent": false,
+          "in_progress": false
+        }
       ]
     },
     {
       "category": "📌 常规",
       "category_en": "📌 Routine",
       "items": [
-        {"text": "占位：常规待办 1", "text_en": "Placeholder: routine todo 1", "done": false, "urgent": false, "in_progress": false},
-        {"text": "占位：已完成待办示例", "text_en": "Placeholder: completed todo example", "done": true, "urgent": false, "in_progress": false}
+        {
+          "text": "占位：常规待办 1",
+          "text_en": "Placeholder: routine todo 1",
+          "done": false,
+          "urgent": false,
+          "in_progress": false
+        },
+        {
+          "text": "占位：已完成待办示例",
+          "text_en": "Placeholder: completed todo example",
+          "done": true,
+          "urgent": false,
+          "in_progress": false
+        }
       ]
     }
   ],
