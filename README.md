@@ -22,6 +22,40 @@
     └── skills-briefing/    AI 技能汇报页（四条叙事线）
 ```
 
+## Quick Install（一键安装技能到 Claude Code / Codex）
+
+「AI Agent skills/」下的两项技能（paper-explainer、html-beautify）可一键安装到 **Claude Code**（`~/.claude/skills/`）或 **OpenAI Codex**（`~/.codex/skills/`），无需先 clone 本仓库：
+
+**Claude Code**（macOS / Linux / WSL / Windows Git Bash）：
+
+```bash
+# GitHub 源
+curl -fsSL https://raw.githubusercontent.com/DSM-DSM/ai-agent4research-isbd-ruc/main/install.sh | bash -s -- --remote github
+# Gitee 源（中国大陆网络推荐）
+curl -fsSL https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc/raw/main/install.sh | bash -s -- --remote gitee
+```
+
+**OpenAI Codex**：同上加 `--codex`（装到 `~/.codex/skills/`）；Claude Code 与 Codex 都装用 `--all`。
+
+**Windows PowerShell**：
+
+```powershell
+irm https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc/raw/main/install.ps1 | iex
+# 需要装到 Codex / 两者都装：先落盘再带参执行
+irm https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc/raw/main/install.ps1 -OutFile install.ps1
+.\install.ps1 -Target all          # claude | codex | all（GitHub 源把域名部分换回 raw.githubusercontent.com）
+```
+
+**已 clone 本仓库**（任意平台，含手动升级已装技能）：
+
+```bash
+bash install.sh --all --force      # Windows: .\install.ps1 -Target all -Force
+```
+
+**手动安装**：把 `AI Agent skills/<技能名>` 整个目录复制到 `~/.claude/skills/`（Claude Code）或 `~/.codex/skills/`（Codex）即可。
+
+安装脚本采用 sparse checkout，仅拉取技能目录（几百 KB，不下载模板与成品资源）。装好后**重启会话**，输入技能名或直接描述任务（如「帮我精读这批论文 PDF」「帮我从零做一个学术网页」）即自动触发。
+
 ## 使用
 
 - 全部页面为**纯静态 HTML / CSS / JS**，零构建依赖；双击 `index.html` 即可本地浏览，
