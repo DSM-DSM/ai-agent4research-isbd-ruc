@@ -5,3 +5,4 @@ Thumbs.db
 *.log
 _tmp_*
 _v_*.png
+visit_counts.json
