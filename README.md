@@ -8,9 +8,13 @@
 
 ```
 ├── index.html            站点导览页（Skills 板块 + 模板库 + 作者卡）
-├── AI Agent skills/      两项核心技能的完整定义
-│   ├── paper-explainer/  论文 PDF → 中文详解网页 + 跨论文知识图谱
-│   └── html-beautify/    网页设计系统与构建（本站即其作品）
+├── AI Agent skills/      六项技能的完整定义（皆可一键安装）
+│   ├── paper-explainer/  论文 PDF → 中文详解网页 + 跨论文知识图谱（自研）
+│   ├── html-beautify/    网页设计系统与构建，本站即其作品（自研）
+│   ├── prompt-enhancer/  三模式提示词增强器（整合上游 + 自研路由）
+│   ├── baton/            跨会话工作交接接力棒（整合上游 + 深度定制）
+│   ├── anysearch/        实时搜索引擎：通用 + 垂直域 + 批量并行（社区项目）
+│   └── agent-reach/      登录类平台统一路由，15 平台（社区项目）
 ├── lecture/              讲演幻灯模板（17 套主题）
 ├── lab-meeting/          组会汇报模板（11 套主题）
 ├── commerical-lecture/   商业演示模板（7 套主题）
@@ -24,7 +28,7 @@
 
 ## Quick Install（一键安装技能到 Claude Code / Codex）
 
-「AI Agent skills/」下的两项技能（paper-explainer、html-beautify）可一键安装到 **Claude Code**（`~/.claude/skills/`）或 **OpenAI Codex**（`~/.codex/skills/`），无需先 clone 本仓库：
+「AI Agent skills/」下的六项技能（paper-explainer、html-beautify、prompt-enhancer、baton、anysearch、agent-reach）可一键安装到 **Claude Code**（`~/.claude/skills/`）或 **OpenAI Codex**（`~/.codex/skills/`），无需先 clone 本仓库：
 
 **Claude Code**（macOS / Linux / WSL / Windows Git Bash）：
 

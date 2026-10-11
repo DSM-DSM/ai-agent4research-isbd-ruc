@@ -1,0 +1,46 @@
+﻿{
+    "version":  "1.0.0",
+    "last_check":  "2026-08-02T19:49:40.2780241+08:00",
+    "upstreams":  {
+                      "getsentry/prompt-optimizer":  {
+                                                         "repo":  "https://github.com/getsentry/skills",
+                                                         "skill_path":  "skills/prompt-optimizer",
+                                                         "last_merged_sha":  "c190d369bcbaa6cfdd95e9edfdba040506b4db76",
+                                                         "merged_files":  [
+                                                                              "SKILL.md",
+                                                                              "references/core-patterns.md",
+                                                                              "references/meta-optimization-loop.md",
+                                                                              "references/model-family-notes.md",
+                                                                              "references/transformed-examples.md"
+                                                                          ],
+                                                         "mapped_to":  {
+                                                                           "SKILL.md":  "Mode 3: Eval-Driven workflow in SKILL.md",
+                                                                           "references/core-patterns.md":  "Integrated into golden-rules.md + technique-table.md",
+                                                                           "references/meta-optimization-loop.md":  "references/eval-loop.md",
+                                                                           "references/model-family-notes.md":  "references/model-profiles.md"
+                                                                       }
+                                                     },
+                      "PhAlves23/prompt-engineering-skill":  {
+                                                                 "repo":  "https://github.com/PhAlves23/prompt-engineering-skill",
+                                                                 "skill_path":  "plugins/prompt-engineering/skills/prompt-engineering",
+                                                                 "last_merged_sha":  "20aca9f59ed10b316298efb741225773d08ba293",
+                                                                 "merged_files":  [
+                                                                                      "SKILL.md",
+                                                                                      "references/techniques.md",
+                                                                                      "references/model-profiles.md",
+                                                                                      "references/task-patterns.md",
+                                                                                      "references/quality-checklist.md",
+                                                                                      "references/worked-examples.md",
+                                                                                      "references/golden-rules.md"
+                                                                                  ],
+                                                                 "mapped_to":  {
+                                                                                   "SKILL.md":  "Mode 1: Standard workflow in SKILL.md",
+                                                                                   "references/techniques.md":  "references/technique-table.md",
+                                                                                   "references/model-profiles.md":  "references/model-profiles.md (direct copy)",
+                                                                                   "references/task-patterns.md":  "Integrated into technique-table.md",
+                                                                                   "references/quality-checklist.md":  "references/quality-checklist.md (direct copy)",
+                                                                                   "references/golden-rules.md":  "references/golden-rules.md (direct copy)"
+                                                                               }
+                                                             }
+                  }
+}
