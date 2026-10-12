@@ -7,10 +7,12 @@
 #   .\install.ps1 -Target all          # 两者都装
 #   .\install.ps1 -Force               # 覆盖同名技能（默认跳过并提示）
 #
-# 用法 B（一键远程安装，无需先 clone）:
-#   irm https://raw.githubusercontent.com/DSM-DSM/ai-agent4research-isbd-ruc/main/install.ps1 | iex
-#   irm https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc/raw/main/install.ps1 | iex
-#   （远程模式自动 clone；国内网络把 URL 换成 Gitee 源即可）
+# 用法 B（一键远程安装，无需先 clone；需联网，两种源按网络选）:
+#   无需翻墙（Gitee 源 · 中国大陆推荐）:
+#     irm https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc/raw/main/install.ps1 | iex
+#   需要翻墙 / 海外网络（GitHub 源）:
+#     irm https://raw.githubusercontent.com/DSM-DSM/ai-agent4research-isbd-ruc/main/install.ps1 | iex
+#   （GitHub 源失败时脚本内加 -UseGitee 或直接换 Gitee URL）
 # =============================================================================
 param(
   [string]$Target = "claude",   # claude | codex | all

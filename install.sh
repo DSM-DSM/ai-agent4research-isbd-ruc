@@ -9,10 +9,12 @@
 #   bash install.sh --force         # 覆盖同名技能（默认跳过并提示）
 #   bash install.sh --dest <目录>    # 自定义安装根目录（用于测试）
 #
-# 用法 B（一键远程安装，无需先 clone）:
-#   curl -fsSL https://raw.githubusercontent.com/DSM-DSM/ai-agent4research-isbd-ruc/main/install.sh | bash -s -- --remote github
-#   curl -fsSL https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc/raw/main/install.sh   | bash -s -- --remote gitee
-#   （加 --codex / --all / --force 同用法 A；中国大陆网络建议 --remote gitee）
+# 用法 B（一键远程安装，无需先 clone；需联网，两种源按网络选）:
+#   无需翻墙（Gitee 源 · 中国大陆推荐）:
+#     curl -fsSL https://gitee.com/AiALi7-9-22/ai-agent4research-isbd-ruc/raw/main/install.sh | bash -s -- --remote gitee
+#   需要翻墙 / 海外网络（GitHub 源）:
+#     curl -fsSL https://raw.githubusercontent.com/DSM-DSM/ai-agent4research-isbd-ruc/main/install.sh | bash -s -- --remote github
+#   （加 --codex / --all / --force 同用法 A）
 # =============================================================================
 set -e
 
