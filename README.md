@@ -26,7 +26,7 @@
     └── skills-briefing/    AI 技能汇报页（四条叙事线）
 ```
 
-## Quick Install（一键安装技能到 Claude Code / Codex）
+## Quick Install
 
 「AI Agent skills/」下的六项技能（paper-explainer、html-beautify、prompt-enhancer、baton、anysearch、agent-reach）可一键安装到 **Claude Code**（`~/.claude/skills/`）或 **OpenAI Codex**（`~/.codex/skills/`）。
 
