@@ -223,6 +223,20 @@
             animation-delay: .34s;
         }
 
+        /* 技能板块与模板板块之间的衔接句（.sec-head 是 flex，本段 width:100% 独占一行） */
+        .bridge {
+            width: 100%;
+            margin-top: 22px;
+            padding: 11px 16px;
+            border-left: 3px solid var(--red);
+            background: var(--bg);
+            border-radius: 0 8px 8px 0;
+            font-size: 13.5px;
+            color: var(--ink-2);
+            line-height: 1.75;
+            animation: rise .55s .38s cubic-bezier(.16, 1, .3, 1) both;
+        }
+
         .grid-repos {
             display: flex;
             flex-wrap: wrap;
@@ -1090,6 +1104,7 @@
         <span class="sec-kicker">Templates</span>
         <h2 class="sec-title"><span data-zh>HTML 模板库</span><span data-en>HTML Template Library</span></h2>
         <p class="sec-sub"><span data-zh>五类科研汇报场景 · 主题一键切换 · 双击即用</span><span data-en>Five research-presentation scenarios · one-click theming · works straight from a double-click</span></p>
+        <p class="bridge"><span data-zh>上面那些技能做出来的，就是下面这五套模板。它们是已经跑通的成品：套用的时候只改文字和图片就能用，想换成自己的样子则交给「网页设计引擎」。</span><span data-en>What those skills produce is what you see below. All five templates are working sites: to use one, just swap in your own text and images; to restyle one, hand it to the Web Design Engine.</span></p>
     </div>
 
     <main class="grid">
@@ -1098,7 +1113,7 @@
                 <h2><span data-zh>讲演幻灯</span><span data-en>Lecture Slides</span><span class="en">Lecture Slides</span></h2>
                 <span aria-hidden="true" class="no">01</span>
             </div>
-            <p><span data-zh>像讲义一样从上往下滚的讲演长页，目录自动生成，公式能渲染，讲完可以直接导出 PDF。</span><span data-en>A lecture page you scroll top to bottom — the TOC builds itself, formulas render, and the deck exports to PDF when you're done.</span></p>
+            <p><span data-zh>给一节课或一场组会准备的幻灯片。它是一张从头滚到尾的长页，不是一页页翻的那种；左边目录跟着滚动自动生成，公式能正常渲染，讲完还能导出 PDF 发给别人。</span><span data-en>Slides for a class or a lab meeting. It's one long page you scroll through rather than flip; the sidebar TOC builds itself as you scroll, formulas render, and you can export a PDF to hand around afterwards.</span></p>
             <span class="meta"><span data-zh>17 套主题 · 双击即用</span><span data-en>17 themes · double-click ready</span><span class="visits" hidden data-key="lecture"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg><span class="n"></span></span></span>
             <svg aria-hidden="true" class="arw" viewBox="0 0 12 12">
                 <path d="M2 6h7M6 2.5 9.5 6 6 9.5"/>
@@ -1109,7 +1124,7 @@
                 <h2><span data-zh>组会汇报</span><span data-en>Lab Meeting</span><span class="en">Lab Meeting</span></h2>
                 <span aria-hidden="true" class="no">02</span>
             </div>
-            <p><span data-zh>每周组会往 JSON 里添几行，站点就跟着更新；总览页带方法转盘和进度时间线。</span><span data-en>Add a few lines to the JSON after each meeting and the site updates itself — overview hub with a method carousel and a progress timeline.</span></p>
+            <p><span data-zh>给长期项目记进度用的站点。每周开完组会，往数据文件里添几行记录，网站自己就会更新；总览页有方法转盘和进度时间线，点进去是每周的详情页。</span><span data-en>A site for tracking a long-running project. Add a few lines to the data file after each weekly meeting and it updates itself; the overview has a method carousel and a progress timeline, and each week links to its own detail page.</span></p>
             <span class="meta"><span data-zh>11 套主题 · 需本地服务器</span><span data-en>11 themes · needs a local server</span><span class="visits" hidden data-key="lab-meeting"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg><span class="n"></span></span></span>
             <svg aria-hidden="true" class="arw" viewBox="0 0 12 12">
                 <path d="M2 6h7M6 2.5 9.5 6 6 9.5"/>
@@ -1120,7 +1135,7 @@
                 <h2><span data-zh>商业演示</span><span data-en>Commercial Lecture</span><span class="en">Commercial Lecture</span></h2>
                 <span aria-hidden="true" class="no">03</span>
             </div>
-            <p><span data-zh>给合作方和甲方看的能力展示页，可以滚动浏览，也能当幻灯片一页页翻，翻页笔直接用。</span><span data-en>A capability page for partners and clients — scroll through it, or flip it like a deck with your clicker in hand.</span></p>
+            <p><span data-zh>拿去给合作方和客户看的能力展示页，讲的是你能做什么。开场顺着往下滚，到了正题就能一页页翻，滚轮、键盘和翻页笔都认。</span><span data-en>A capability page for partners and clients. It opens as a scroll, then switches to page-by-page flipping once you reach the content; the wheel, the keyboard and a presentation clicker all work.</span></p>
             <span class="meta"><span data-zh>7 套主题 · 需本地服务器</span><span data-en>7 themes · needs a local server</span><span class="visits" hidden data-key="commerical-lecture"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg><span class="n"></span></span></span>
             <svg aria-hidden="true" class="arw" viewBox="0 0 12 12">
                 <path d="M2 6h7M6 2.5 9.5 6 6 9.5"/>
@@ -1131,7 +1146,7 @@
                 <h2><span data-zh>论文精读</span><span data-en>Paper Explainer</span><span class="en">Paper Explainer</span></h2>
                 <span aria-hidden="true" class="no">04</span>
             </div>
-            <p><span data-zh>从阅读路径进，逐章读详解，背景查词典，最后看知识图谱，四类页面互链成一座精读库。</span><span data-en>Start on the reading path, read chapter by chapter, look up background in the glossary, then see the graph — four page types linked into one library.</span></p>
+            <p><span data-zh>把一个研究方向的论文攒成一座精读库。读者从阅读路径进，知道先读哪篇；进去后逐章看详解，遇到不懂的名词查背景词典，最后在知识图谱上看这些论文之间有什么联系。</span><span data-en>Turns the papers in one research direction into a reading library. Readers start from the reading path to see which paper to open first, read chapter-by-chapter walkthroughs, look up unfamiliar terms in the glossary, and see how the papers connect on the knowledge graph.</span></p>
             <span class="meta"><span data-zh>8 套主题 · 双击即用</span><span data-en>8 themes · double-click ready</span><span class="visits" hidden data-key="paper-explainer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg><span class="n"></span></span></span>
             <svg aria-hidden="true" class="arw" viewBox="0 0 12 12">
                 <path d="M2 6h7M6 2.5 9.5 6 6 9.5"/>
@@ -1142,7 +1157,7 @@
                 <h2><span data-zh>学术主页</span><span data-en>Personal Homepage</span><span class="en">Personal Homepage</span></h2>
                 <span aria-hidden="true" class="no">05</span>
             </div>
-            <p><span data-zh>给老师和研究生用的主页模板，选好学科主题就有一套完整示例，中英文一键切换。</span><span data-en>A homepage template for faculty and grad students — pick a discipline theme and a full set of examples comes with it, bilingual in one click.</span></p>
+            <p><span data-zh>老师和研究生放个人信息的学术主页。填上简介、论文和联系方式就能发出去；不好写的地方照着同学科的示例改，中英文可以一键切换。</span><span data-en>A homepage for faculty and grad students to put their details online. Fill in your bio, papers and contact address and it's ready to publish; where you're unsure what to write, edit the sample from your own discipline. Bilingual in one click.</span></p>
             <span class="meta"><span data-zh>34 套主题 · 双击即用</span><span data-en>34 themes · double-click ready</span><span class="visits" hidden data-key="personal-homepage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg><span class="n"></span></span></span>
             <svg aria-hidden="true" class="arw" viewBox="0 0 12 12">
                 <path d="M2 6h7M6 2.5 9.5 6 6 9.5"/>
