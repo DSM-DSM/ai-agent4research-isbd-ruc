@@ -615,77 +615,104 @@
             opacity: .85;
         }
 
+        /* —— 入口二维码：扫码进站 / 打印分享 —— */
+        .qrshare {
+            margin-top: 42px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line-strong);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 26px 44px;
+            animation: rise .55s .50s cubic-bezier(.16, 1, .3, 1) both;
+        }
+
+        /* 二维码永远白底：暗色模式下同样可扫 */
+        .qr-card {
+            flex: none;
+            width: 176px;
+            padding: 12px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            box-shadow: var(--lift);
+        }
+
+        .qr-card svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .qr-side {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .qr-url {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+            max-width: 480px;
+        }
+
+        .qr-url input {
+            flex: 1;
+            min-width: 0;
+            font: inherit;
+            font-size: 13px;
+            color: var(--ink);
+            background: var(--card);
+            border: 1px solid var(--line-strong);
+            border-radius: 8px;
+            padding: 7px 12px;
+        }
+
+        .qr-url input:focus-visible {
+            outline: 2px solid var(--red);
+            outline-offset: 1px;
+        }
+
+        .qr-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .qr-btn {
+            font: inherit;
+            font-size: 13px;
+            color: var(--red);
+            background: transparent;
+            border: 1px solid var(--red);
+            border-radius: 8px;
+            padding: 7px 16px;
+            cursor: pointer;
+            transition: background .16s ease-out, color .16s ease-out;
+        }
+
+        .qr-btn:hover {
+            background: var(--red);
+            color: #fff;
+        }
+
+        html[data-mode="dark"] .qr-btn:hover {
+            color: #1c0b10;
+        }
+
+        .qr-tip {
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--ink-2);
+            opacity: .85;
+        }
+
         footer {
             margin-top: 56px;
             padding-top: 26px;
             border-top: 1px solid var(--line-strong);
             animation: rise .55s .54s cubic-bezier(.16, 1, .3, 1) both;
-        }
-
-        .foot-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 26px 40px;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .a-name {
-            font-family: var(--serif);
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: .04em;
-        }
-
-        .a-org {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--ink-2);
-            margin-top: 4px;
-        }
-
-        /* —— 作者卡：头像 + 姓名 + 机构 + 简介（新增作者时复制一个 .author 块即可） —— */
-        .authors {
-            display: flex;
-            flex-direction: column;
-            gap: 22px;
-        }
-
-        .author {
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-            max-width: 460px;
-        }
-
-        .author img.avatar {
-            flex: none;
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            border: 1px solid var(--line-strong);
-            object-fit: cover;
-        }
-
-        .a-bio {
-            font-size: 12.5px;
-            color: var(--ink-2);
-            line-height: 1.7;
-            margin-top: 6px;
-        }
-
-        .mail {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--red);
-            text-decoration: none;
-        }
-
-        .mail:hover {
-            text-decoration: underline;
-            text-underline-offset: 3px;
         }
 
         .repos {
@@ -749,6 +776,8 @@
             .nav-brand .brand-suffix { display: none; }
 
             .topnav-inner { padding: 7px 20px; }
+
+            #pref-share [data-zh], #pref-share [data-en] { display: none; }
 
             .grid-repos {
                 justify-content: flex-start;
@@ -868,6 +897,120 @@
             stroke-linejoin: round;
         }
 
+        /* —— 导航栏分享：按钮 + 弹出面板（扫码 / 复制链接） —— */
+        .share-wrap {
+            position: relative;
+            display: inline-flex;
+        }
+
+        .share-pop {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            z-index: 1300;
+            width: 236px;
+            padding: 14px 14px 12px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            box-shadow: var(--lift);
+        }
+
+        .share-pop[hidden] { display: none; }
+
+        .share-qr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+        }
+
+        /* 二维码永远白底：暗色模式同样可扫 */
+        .share-qr-img {
+            width: 148px;
+            padding: 9px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+        }
+
+        .share-qr-img svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .share-qr-cap {
+            font-size: 11.5px;
+            color: var(--ink-2);
+        }
+
+        .share-qr-dl {
+            font: inherit;
+            font-size: 12px;
+            color: var(--red);
+            background: none;
+            border: none;
+            padding: 2px 6px;
+            cursor: pointer;
+            text-decoration: underline dotted;
+            text-underline-offset: 3px;
+        }
+
+        .share-qr-dl:hover { color: var(--red-hover); }
+
+        .share-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 9px 12px;
+            font: inherit;
+            font-size: 13px;
+            color: var(--ink);
+            background: var(--bg);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            transition: border-color .16s ease-out, color .16s ease-out;
+        }
+
+        .share-row:hover {
+            border-color: var(--red);
+            color: var(--red-hover);
+        }
+
+        .share-ic {
+            flex: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .share-ic.link { background: var(--red); }
+
+        .share-ic.link svg {
+            width: 12px;
+            height: 12px;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @media (max-width: 560px) {
+            .share-pop { width: min(236px, calc(100vw - 44px)); }
+        }
+
         @media (prefers-reduced-motion: reduce) {
             .topline, .masthead, .stats, .sec-head, .skill, .skill-note, .card, .road, footer {
                 animation: none;
@@ -900,9 +1043,26 @@
     <div class="topnav-inner">
         <a class="nav-brand" href="#" title="回到顶部 / Back to top"><b>ai-agent4research</b><span class="brand-suffix">-isbd-ruc</span></a>
         <div class="pref-bar">
-    <div class="pref-visits" id="prefVisits" hidden title="总访问量 / Total visits">
+    <div class="pref-visits" id="prefVisits" title="总访问量 / Total visits">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg>
         <span id="visitTotal">—</span>
+    </div>
+    <div class="share-wrap">
+        <button class="pref-btn" id="pref-share" type="button" aria-label="分享本站 / Share this site" aria-expanded="false" aria-haspopup="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="18.5" r="2.6"/><path d="M8.3 10.6l7.4-3.7M8.3 13.4l7.4 3.7"/></svg>
+            <span data-zh>分享</span><span data-en>Share</span>
+        </button>
+        <div class="share-pop" id="sharePop" hidden>
+            <div class="share-qr">
+                <div class="share-qr-img" id="shareQrImg"></div>
+                <p class="share-qr-cap"><span data-zh>扫码打开本站</span><span data-en>Scan to open</span></p>
+                <button class="share-qr-dl" id="shareQrDl" type="button"><span data-zh>下载二维码 PNG</span><span data-en>Download QR PNG</span></button>
+            </div>
+            <button class="share-row" id="shareCopy" type="button">
+                <span class="share-ic link" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7.1 0l3-3a5 5 0 0 0-7.1-7.1l-1.7 1.7"/><path d="M14 10a5 5 0 0 0-7.1 0l-3 3a5 5 0 0 0 7.1 7.1l1.7-1.7"/></svg></span>
+                <span data-zh>复制链接</span><span data-en>Copy link</span>
+            </button>
+        </div>
     </div>
     <button class="pref-btn" id="pref-lang" type="button" aria-label="切换语言 / Switch language"><span data-zh>EN</span><span data-en>中文</span></button>
     <button class="pref-btn" id="pref-mode" type="button" aria-label="切换明暗 / Toggle light & dark">
@@ -1190,21 +1350,24 @@
         <span class="road-note"><span data-zh>新模板将陆续加入本页</span><span data-en>New templates will land here</span></span>
     </section>
 
-    <footer>
-        <div class="foot-grid">
-            <div class="authors">
-                <!-- 新增作者：复制一个 .author 块；头像照片放 authors/ 目录并把 src 指向它 -->
-                <div class="author">
-                    <img alt="俞锦越" class="avatar" src="authors/yujinyue.svg">
-                    <div>
-                        <p class="a-name"><span data-zh>俞锦越</span><span data-en>Jinyue Yu</span></p>
-                        <p class="a-org"><span data-zh>中国人民大学 · 统计与大数据研究院（ISBD）</span><span data-en>Renmin University of China · Institute of Statistics and Big Data (ISBD)</span></p>
-                        <p class="a-bio"><span data-zh>AI Agent 科研技能与学术网页模板的作者，paper-explainer 与 html-beautify 两项技能的构建者。</span><span data-en>Author of the AI Agent research skills and academic web templates; builder of paper-explainer and html-beautify.</span></p>
-                        <a class="mail" href="mailto:yujinyue@ruc.edu.cn"><span data-zh>邮箱：</span><span data-en>Email: </span>yujinyue@ruc.edu.cn</a>
-                    </div>
-                </div>
+    <section aria-label="入口二维码" class="qrshare" id="qrShare" hidden>
+        <div class="qr-card" id="qrCard"></div>
+        <div class="qr-side">
+            <span class="sec-kicker">Share</span>
+            <h2 class="sec-title"><span data-zh>扫码进入本站</span><span data-en>Scan to visit</span></h2>
+            <p class="sec-sub"><span data-zh>手机相机扫码即可打开。二维码编码的是公网入口，任何网络都能扫；要给站内某个模板生成码，把它的链接粘进来就会重画。</span><span data-en>Point a phone camera at the code to open this site. It encodes the public address, so it scans from any network; paste a template link below and the code redraws for that page.</span></p>
+            <div class="qr-url">
+                <input id="qrUrl" type="url" spellcheck="false" aria-label="二维码链接 / QR target URL">
+                <button class="qr-btn" id="qrCopy" type="button"><span data-zh>复制链接</span><span data-en>Copy link</span></button>
             </div>
+            <div class="qr-actions">
+                <button class="qr-btn" id="qrDown" type="button"><span data-zh>下载二维码 PNG（720×720 白底，可打印）</span><span data-en>Download QR PNG (720×720, print-ready)</span></button>
+            </div>
+            <p class="qr-tip"><span data-zh>打印贴冰箱用默认的 ruc-yjy.site 就行，别换局域网 IP——出了家门就扫不开了。</span><span data-en>For print, keep the default ruc-yjy.site; a LAN IP stops scanning the moment you leave home.</span></p>
         </div>
+    </section>
+
+    <footer>
         <p class="legal">
             <span data-zh>© 2026 ai-agent4research-isbd-ruc · 采用非商业署名许可：课程作业、学术汇报等非商业场景可免费使用，请署名并标注出处</span><span data-en>© 2026 ai-agent4research-isbd-ruc · Non-commercial attribution license: free for coursework and academic reporting with attribution</span>
         </p>
@@ -1237,8 +1400,9 @@
     try { localStorage.setItem('a4r-mode', m); } catch (e) {}
   });
 })();
-/* 访问量：读 NAS cron 统计的 visit_counts.json（同目录相对路径）；
-   file:// 双击或本地无数据时 fetch 失败 → 徽章保持隐藏，不打扰页面 */
+/* 访问量：徽章随首帧立即渲染（占位 "—"），数字待 NAS cron 统计的 visit_counts.json
+   返回后原地填充——不再等请求回来才弹出，导航栏不会晚出现一拍；
+   file:// 双击或本地无数据时 fetch 失败 → 届时再藏起徽章，不打扰页面 */
 (function () {
   fetch('visit_counts.json', { cache: 'no-store' }).then(function (r) {
     return r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status));
@@ -1247,8 +1411,6 @@
     if (typeof d.total === 'number') {
       var t = document.getElementById('visitTotal');
       if (t) t.textContent = d.total.toLocaleString();
-      var pv = document.getElementById('prefVisits');
-      if (pv) pv.hidden = false;
     }
     var m = d.pages || {};
     if (d.clicks) Object.keys(d.clicks).forEach(function (k) { m[k] = d.clicks[k]; });
@@ -1259,7 +1421,7 @@
         if (typeof n === 'number' && el) { el.textContent = n.toLocaleString(); v.hidden = false; }
       });
     }
-  }).catch(function () { /* 无数据：保持隐藏 */ });
+  }).catch(function () { /* 无数据（file:// 等）：藏起徽章占位 */ var pv = document.getElementById('prefVisits'); if (pv) pv.hidden = true; });
   /* 点击计数 beacon：点「一键安装」等获取链接时发一个站内 404 请求落 nginx 日志，
      统计脚本把 /vk/<key> 计为一次点击（零后端）；keepalive 保证跳转时仍发出 */
   document.addEventListener('click', function (e) {
@@ -1267,6 +1429,179 @@
     if (a && a.dataset.key) {
       try { fetch('vk/' + a.dataset.key, { mode: 'no-cors', keepalive: true }).catch(function () {}); } catch (err) {}
     }
+  });
+})();
+</script>
+<script src="qrcode.js"></script>
+<script>
+/* 入口二维码：qrcode-generator@1.4.4（MIT，随站自带 qrcode.js，零外网依赖）。
+   默认编码公网入口 https://ruc-yjy.site —— 任何网络可扫、可打印；
+   在本站域名下打开时自动改用当前地址。库缺失时整块保持隐藏，不影响页面。 */
+(function () {
+  var PUB = 'https://ruc-yjy.site';
+  var sec = document.getElementById('qrShare');
+  if (!sec || typeof window.qrcode !== 'function') return;
+  var box = document.getElementById('qrCard');
+  var input = document.getElementById('qrUrl');
+  var lastSvg = '';
+
+  function target() {
+    return location.hostname === 'ruc-yjy.site' ? location.origin : PUB;
+  }
+
+  function render() {
+    var url = (input.value || '').trim() || target();
+    try {
+      var qr = window.qrcode(0, 'M');
+      qr.addData(url);
+      qr.make();
+      lastSvg = qr.createSvgTag(6, 4);
+      box.innerHTML = lastSvg;
+      sec.hidden = false;
+    } catch (e) { sec.hidden = true; }
+  }
+
+  input.value = target();
+  input.addEventListener('change', render);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') input.blur();
+  });
+
+  document.getElementById('qrCopy').addEventListener('click', function () {
+    var url = (input.value || '').trim() || target();
+    var fallback = function () {
+      var t = document.createElement('textarea');
+      t.value = url;
+      document.body.appendChild(t);
+      t.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(t);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).catch(fallback);
+    } else { fallback(); }
+  });
+
+  /* 打印图：SVG → data URL → 720×720 白底 canvas → PNG 下载 */
+  document.getElementById('qrDown').addEventListener('click', function () {
+    if (!lastSvg) return;
+    var svg = lastSvg.indexOf('xmlns') < 0
+      ? lastSvg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ') : lastSvg;
+    var img = new Image();
+    img.onload = function () {
+      var c = document.createElement('canvas');
+      c.width = c.height = 720;
+      var x = c.getContext('2d');
+      x.fillStyle = '#fff';
+      x.fillRect(0, 0, 720, 720);
+      x.drawImage(img, 0, 0, 720, 720);
+      try {
+        var host = (input.value || target()).replace(/^[a-z]+:\/\//i, '').split('/')[0];
+        var a = document.createElement('a');
+        a.href = c.toDataURL('image/png');
+        a.download = (host.replace(/[^a-z0-9.-]/gi, '-') || 'qrcode') + '-qrcode.png';
+        a.click();
+      } catch (e) {}
+    };
+    img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svg)));
+  });
+
+  render();
+})();
+</script>
+<script>
+/* 导航栏分享：面板内二维码（复用 qrcode.js，扫码打开本站）+ 复制链接。
+   面板随按钮开合，点面板外 / Esc 关闭；qrcode.js 缺失时二维码区隐藏，其余功能照常。 */
+(function () {
+  var PUB = 'https://ruc-yjy.site';
+  var btn = document.getElementById('pref-share');
+  var pop = document.getElementById('sharePop');
+  if (!btn || !pop) return;
+  var qrImg = document.getElementById('shareQrImg');
+  var dlBtn = document.getElementById('shareQrDl');
+
+  function target() {
+    return (location.hostname === 'ruc-yjy.site' ? location.origin : PUB) + '/';
+  }
+  var svg = '';
+  function drawQr() {
+    if (svg || typeof window.qrcode !== 'function') return;
+    try {
+      var q = window.qrcode(0, 'M');
+      q.addData(target());
+      q.make();
+      svg = q.createSvgTag(5, 4);
+      qrImg.innerHTML = svg;
+    } catch (e) { svg = ''; }
+  }
+  if (typeof window.qrcode !== 'function') {
+    var qa = qrImg.closest('.share-qr');
+    if (qa) qa.style.display = 'none';
+  }
+
+  function openPop(open) {
+    pop.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) drawQr();
+  }
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    openPop(pop.hidden);
+  });
+  document.addEventListener('click', function (e) {
+    if (!pop.hidden && !pop.contains(e.target) && e.target !== btn) openPop(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !pop.hidden) { openPop(false); btn.focus(); }
+  });
+
+  /* 复制链接：剪贴板 API + execCommand 降级，按钮短暂显示"已复制" */
+  var copyBtn = document.getElementById('shareCopy');
+  var zh = copyBtn.querySelector('[data-zh]'), en = copyBtn.querySelector('[data-en]');
+  var zhTxt = zh.textContent, enTxt = en.textContent, tId = null;
+  copyBtn.addEventListener('click', function () {
+    var url = target();
+    var feedback = function () {
+      zh.textContent = '已复制 ✓';
+      en.textContent = 'Copied ✓';
+      clearTimeout(tId);
+      tId = setTimeout(function () { zh.textContent = zhTxt; en.textContent = enTxt; }, 1600);
+    };
+    var fallback = function () {
+      var t = document.createElement('textarea');
+      t.value = url;
+      document.body.appendChild(t);
+      t.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(t);
+      feedback();
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(feedback, fallback);
+    } else { fallback(); }
+  });
+
+  /* 下载二维码 PNG：与页底二维码区同规格（720×720 白底） */
+  dlBtn.addEventListener('click', function () {
+    if (!svg) return;
+    var s = svg.indexOf('xmlns') < 0
+      ? svg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ') : svg;
+    var img = new Image();
+    img.onload = function () {
+      var c = document.createElement('canvas');
+      c.width = c.height = 720;
+      var x = c.getContext('2d');
+      x.fillStyle = '#fff';
+      x.fillRect(0, 0, 720, 720);
+      x.drawImage(img, 0, 0, 720, 720);
+      try {
+        var a = document.createElement('a');
+        a.href = c.toDataURL('image/png');
+        a.download = 'ruc-yjy-site-qrcode.png';
+        a.click();
+      } catch (e) {}
+    };
+    img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(s)));
   });
 })();
 </script>
