@@ -47,7 +47,7 @@
 | 研究方向 | 3 张卡片 | `#research` 内 `.rcard` |
 | 学术论文 | 每学科 2 篇，题目 `XXX`、作者 `XXX`、期刊名 `XXX`、卷期 `XXX`，年份保留 | `#publications` 内按年份组增删 `.pub-item`；本人姓名加 `class="self"` 高亮；PDF/代码/DOI 的 `href="#"` 换成真实地址 |
 | BibTeX | 各篇 `.bib pre`（`title = {XXX}`、作者 `XXX and XXX`、`journal = {XXX}`、键名 `zhou2025…`） | 替换为真实引用文本，复制按钮自动取 `pre` 文本 |
-| 科研项目 | 每学科 2 个，资助方 `XXX`，保留「主持/参与 · 起止 · 在研/结题」 | `#projects` 内 `.rcard` |
+| 科研项目 | 每学科 2 个，标题为「科研项目一 / 科研项目二」（英 `Project 1/2`），资助方 `XXX`，保留「主持/参与 · 起止 · 在研/结题」 | `#projects` 内 `.rcard` |
 | 教学 | 每学科 2 门，课程名 `XXX`，保留学段/学期标签 + 讲义链接（`href="#"`） | `#teaching` 内 `.course` |
 | 荣誉奖励 | 每学科 3 条，奖项名 `XXX`，年份保留 | `#honors` 内 `.tl-item` |
 | 学术报告 | 每学科 2 场，报告题目 `XXX`、会议/地点 `XXX`（幻灯片 `href="#"`） | `#talks` 内 `.tl-item` |
