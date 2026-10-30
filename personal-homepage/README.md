@@ -26,31 +26,33 @@
 
 ## 替换清单（占位内容总表）
 
-模板全部内容为虚构占位，按出现位置替换：
+模板全部内容为**虚构示例**：人物「周允之 / Yunzhi Zhou」、团队成员、合作者、项目、奖项与数据均为虚构；
+邮箱用 `example.com`（RFC 2606 保留域，不可能真实收件）、地址为虚构门牌、ICP 号为零值示例。
+**模板不含任何真实个人/项目信息**（PRODUCT.md 内容政策）。按出现位置替换成你自己的信息：
 
 | 位置 | 占位内容 | 替换方式 |
 |---|---|---|
-| `<title>` / `<meta description>` | ××× | 改 `index.html` head |
+| `<title>` / `<meta description>` | 周允之 | 改 `index.html` head |
 | 浏览器标签图标 | 红底「人」字 data URI | 换成校徽/个人图标 SVG data URI 或文件路径 |
-| 顶栏品牌 | 人 + ××× | `.tb-mark` 与 `.tb-name` 两处 |
-| Hero 姓名/头衔 | ×××、副教授·博士生导师 | `.hero-name` / `.hero-en-name` / `.hero-title` |
+| 顶栏品牌 | 人 + 周允之 | `.tb-mark` 与 `.tb-name` 两处 |
+| Hero 姓名/头衔 | 周允之 / Yunzhi Zhou、副教授·博士生导师 | `.hero-name` / `.hero-en-name` / `.hero-title` |
 | 单位 | 中国人民大学·统计与大数据研究院 | `.hero-kicker` |
-| 人才称号徽章 | 国家优秀青年科学基金获得者（占位）等 2 枚 | `.hero-badges` 内 `.hb`，可增删 |
+| 徽章 | 校级青年学者支持计划入选者 / 校级杰出青年学者 / 「模板示例·人物与内容均为虚构」共 3 枚 | `.hero-badges` 内 `.hb`，可增删（**上线建议保留虚构声明那枚**） |
 | 研究兴趣 chips | 高维统计推断等 4 枚 | `.hero-chips` 内 `.chip` |
-| 联系方式 | shenzy@ruc.edu.cn（占位邮箱）等 3 行 | `.hero-contact` 与「联系我」版块 |
+| 联系方式 | yunzhi.zhou@example.com（示例邮箱）/ 文渊楼 A302 室 / 虚拟地址 | `.hero-contact` 与「联系我」版块 |
 | 社交链接 | Scholar / ORCID / GitHub / 知乎（href 均为 `#`） | 各 `.soc` 的 `href` 替换为真实主页地址 |
 | 照片 | 灰色人像 SVG 占位 | `.portrait` 内 SVG 换成 `<img>`（建议 600×800 以上，3:4；加载等待可用 `<div class="skel" style="min-height:320px">` 骨架占位） |
 | 关于我 | 两段介绍 | `#about` 内 `.card p` |
 | 教育/工作经历 | 北大博士、哈佛博士后等 | `#about` 内 `.tl-item` |
 | 研究方向 | 3 张卡片 | `#research` 内 `.rcard` |
-| 学术论文 | 8 篇虚构论文（2022–2025），作者均为 ××× | `#publications` 内按年份组增删 `.pub-item`；本人姓名加 `class="self"` 高亮；PDF/代码/DOI 的 `href="#"` 换成真实地址 |
-| BibTeX | 各篇 `.bib pre`（作者 XXX） | 替换为真实引用文本，复制按钮自动取 `pre` 文本 |
-| 科研项目 | 4 个项目（占位） | `#projects` 内 `.rcard` |
+| 学术论文 | 32 篇虚构论文（2022–2025，每学科 2 篇），作者为周允之及虚构合作者（顾清和、林望舒等） | `#publications` 内按年份组增删 `.pub-item`；本人姓名加 `class="self"` 高亮；PDF/代码/DOI 的 `href="#"` 换成真实地址 |
+| BibTeX | 各篇 `.bib pre`（作者 Zhou, Yunzhi 及虚构合作者，键名 `zhou2025…`） | 替换为真实引用文本，复制按钮自动取 `pre` 文本 |
+| 科研项目 | 每学科 2 个（校级基金 / 校企联合 / 横向合作，均未点名真实资助机构） | `#projects` 内 `.rcard` |
 | 教学 | 4 门课程 + 讲义链接（`href="#"`） | `#teaching` 内 `.course` |
-| 荣誉奖励 | 5 条时间线 | `#honors` 内 `.tl-item` |
+| 荣誉奖励 | 每学科 3 条（校级 / 学会 / 会议，均未点名真实颁奖机构） | `#honors` 内 `.tl-item` |
 | 学术报告 | 4 场报告（幻灯片 `href="#"`） | `#talks` 内 `.tl-item` |
-| 团队与招生 | 3 名博士生卡片（姓名 ×××）+ 招生文案 | `#team` 内 `.member` 与 `.recruit` |
-| 页脚 | © 2025、×××、ICP 备案号、模板来源说明 | `footer` |
+| 团队与招生 | 每学科 2 名博士生卡片（虚构姓名）+ 招生文案 | `#team` 内 `.member` 与 `.recruit` |
+| 页脚 | © 2025 周允之、示例 ICP 号（京ICP备 00000000 号-1）、“人物…均为虚构”声明 | `footer` |
 
 ## 目录结构
 
