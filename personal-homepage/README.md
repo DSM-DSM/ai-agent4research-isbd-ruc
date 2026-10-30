@@ -28,7 +28,7 @@
 
 模板**不含任何真实人名、团队、单位、奖项、项目或期刊信息**，所有身份类内容一律用 `XXX` 硬占位（PRODUCT.md 内容政策）：
 人名、单位、导师、合作者、团队成员、荣誉、项目与资助方、期刊/会议名、办公室与地址均为 `XXX`，邮箱为 `XXX@.COM`。
-`XXX` 之外保留的只有学科内容（研究方向、课程名、论文/报告题目）与版式。按下表替换：
+`XXX` 之外保留的只有研究方向（学科展示）与版式；论文题目、报告题目、课程名也已置为 `XXX`。按下表替换：
 
 | 位置 | 占位内容 | 替换方式 |
 |---|---|---|
@@ -45,12 +45,12 @@
 | 关于我 | 两段介绍 | `#about` 内 `.card p` |
 | 教育/工作经历 | 单位与角色均为 XXX · XXX（导师：XXX） | `#about` 内 `.tl-item` |
 | 研究方向 | 3 张卡片 | `#research` 内 `.rcard` |
-| 学术论文 | 每学科 2 篇，作者 `XXX`、期刊名 `XXX`、卷期 `XXX`，年份保留 | `#publications` 内按年份组增删 `.pub-item`；本人姓名加 `class="self"` 高亮；PDF/代码/DOI 的 `href="#"` 换成真实地址 |
-| BibTeX | 各篇 `.bib pre`（作者 `XXX and XXX`、`journal = {XXX}`、键名 `zhou2025…`） | 替换为真实引用文本，复制按钮自动取 `pre` 文本 |
+| 学术论文 | 每学科 2 篇，题目 `XXX`、作者 `XXX`、期刊名 `XXX`、卷期 `XXX`，年份保留 | `#publications` 内按年份组增删 `.pub-item`；本人姓名加 `class="self"` 高亮；PDF/代码/DOI 的 `href="#"` 换成真实地址 |
+| BibTeX | 各篇 `.bib pre`（`title = {XXX}`、作者 `XXX and XXX`、`journal = {XXX}`、键名 `zhou2025…`） | 替换为真实引用文本，复制按钮自动取 `pre` 文本 |
 | 科研项目 | 每学科 2 个，资助方 `XXX`，保留「主持/参与 · 起止 · 在研/结题」 | `#projects` 内 `.rcard` |
-| 教学 | 4 门课程 + 讲义链接（`href="#"`） | `#teaching` 内 `.course` |
+| 教学 | 每学科 2 门，课程名 `XXX`，保留学段/学期标签 + 讲义链接（`href="#"`） | `#teaching` 内 `.course` |
 | 荣誉奖励 | 每学科 3 条，奖项名 `XXX`，年份保留 | `#honors` 内 `.tl-item` |
-| 学术报告 | 每学科 2 场，报告题目保留，会议/地点 `XXX`（幻灯片 `href="#"`） | `#talks` 内 `.tl-item` |
+| 学术报告 | 每学科 2 场，报告题目 `XXX`、会议/地点 `XXX`（幻灯片 `href="#"`） | `#talks` 内 `.tl-item` |
 | 团队与招生 | 每学科 2 名博士生卡片（姓名 `XXX`，方向保留）+ 招生文案 | `#team` 内 `.member` 与 `.recruit` |
 | 页脚 | © 2025 XXX、ICP `XXX`、模板库来源说明 | `footer` |
 
